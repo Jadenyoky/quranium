@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Quranium",
   description: "Website for read , search , listen and mean quran",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({ children }) {
