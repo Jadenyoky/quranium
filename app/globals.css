@@ -2,11 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: ayah;
-  src: url('../public/fonts/QCF2004.ttf');
+h2 {
+  animation: 1.5s rrr ease-in;
 }
 
-h2 {
-  font-family: ayah;
+@keyframes rrr {
+  0% {
+    opacity: 0;
+  }
 }

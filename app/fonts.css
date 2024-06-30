@@ -1,0 +1,3039 @@
+@font-face {
+  font-family: bsml;
+  src: url(/fonts/quran/QCF2BSML.ttf);
+}
+
+/* Generate @font-face rules for fonts QCF2001.ttf to QCF2040.ttf */
+@font-face {
+  font-family: 'page_1';
+  src: url('/fonts/quran/QCF2001.ttf');
+}
+
+@font-face {
+  font-family: 'page_2';
+  src: url('/fonts/quran/QCF2002.ttf');
+}
+
+@font-face {
+  font-family: 'page_3';
+  src: url('/fonts/quran/QCF2003.ttf');
+}
+
+@font-face {
+  font-family: 'page_4';
+  src: url('/fonts/quran/QCF2004.ttf');
+}
+
+@font-face {
+  font-family: 'page_5';
+  src: url('/fonts/quran/QCF2005.ttf');
+}
+
+@font-face {
+  font-family: 'page_6';
+  src: url('/fonts/quran/QCF2006.ttf');
+}
+
+@font-face {
+  font-family: 'page_7';
+  src: url('/fonts/quran/QCF2007.ttf');
+}
+
+@font-face {
+  font-family: 'page_8';
+  src: url('/fonts/quran/QCF2008.ttf');
+}
+
+@font-face {
+  font-family: 'page_9';
+  src: url('/fonts/quran/QCF2009.ttf');
+}
+
+@font-face {
+  font-family: 'page_10';
+  src: url('/fonts/quran/QCF2010.ttf');
+}
+
+@font-face {
+  font-family: 'page_11';
+  src: url('/fonts/quran/QCF2011.ttf');
+}
+
+@font-face {
+  font-family: 'page_12';
+  src: url('/fonts/quran/QCF2012.ttf');
+}
+
+@font-face {
+  font-family: 'page_13';
+  src: url('/fonts/quran/QCF2013.ttf');
+}
+
+@font-face {
+  font-family: 'page_14';
+  src: url('/fonts/quran/QCF2014.ttf');
+}
+
+@font-face {
+  font-family: 'page_15';
+  src: url('/fonts/quran/QCF2015.ttf');
+}
+
+@font-face {
+  font-family: 'page_16';
+  src: url('/fonts/quran/QCF2016.ttf');
+}
+
+@font-face {
+  font-family: 'page_17';
+  src: url('/fonts/quran/QCF2017.ttf');
+}
+
+@font-face {
+  font-family: 'page_18';
+  src: url('/fonts/quran/QCF2018.ttf');
+}
+
+@font-face {
+  font-family: 'page_19';
+  src: url('/fonts/quran/QCF2019.ttf');
+}
+
+@font-face {
+  font-family: 'page_20';
+  src: url('/fonts/quran/QCF2020.ttf');
+}
+
+@font-face {
+  font-family: 'page_21';
+  src: url('/fonts/quran/QCF2021.ttf');
+}
+
+@font-face {
+  font-family: 'page_22';
+  src: url('/fonts/quran/QCF2022.ttf');
+}
+
+@font-face {
+  font-family: 'page_23';
+  src: url('/fonts/quran/QCF2023.ttf');
+}
+
+@font-face {
+  font-family: 'page_24';
+  src: url('/fonts/quran/QCF2024.ttf');
+}
+
+@font-face {
+  font-family: 'page_25';
+  src: url('/fonts/quran/QCF2025.ttf');
+}
+
+@font-face {
+  font-family: 'page_26';
+  src: url('/fonts/quran/QCF2026.ttf');
+}
+
+@font-face {
+  font-family: 'page_27';
+  src: url('/fonts/quran/QCF2027.ttf');
+}
+
+@font-face {
+  font-family: 'page_28';
+  src: url('/fonts/quran/QCF2028.ttf');
+}
+
+@font-face {
+  font-family: 'page_29';
+  src: url('/fonts/quran/QCF2029.ttf');
+}
+
+@font-face {
+  font-family: 'page_30';
+  src: url('/fonts/quran/QCF2030.ttf');
+}
+
+@font-face {
+  font-family: 'page_31';
+  src: url('/fonts/quran/QCF2031.ttf');
+}
+
+@font-face {
+  font-family: 'page_32';
+  src: url('/fonts/quran/QCF2032.ttf');
+}
+
+@font-face {
+  font-family: 'page_33';
+  src: url('/fonts/quran/QCF2033.ttf');
+}
+
+@font-face {
+  font-family: 'page_34';
+  src: url('/fonts/quran/QCF2034.ttf');
+}
+
+@font-face {
+  font-family: 'page_35';
+  src: url('/fonts/quran/QCF2035.ttf');
+}
+
+@font-face {
+  font-family: 'page_36';
+  src: url('/fonts/quran/QCF2036.ttf');
+}
+
+@font-face {
+  font-family: 'page_37';
+  src: url('/fonts/quran/QCF2037.ttf');
+}
+
+@font-face {
+  font-family: 'page_38';
+  src: url('/fonts/quran/QCF2038.ttf');
+}
+
+@font-face {
+  font-family: 'page_39';
+  src: url('/fonts/quran/QCF2039.ttf');
+}
+
+@font-face {
+  font-family: 'page_40';
+  src: url('/fonts/quran/QCF2040.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2041.ttf to QCF2080.ttf */
+@font-face {
+  font-family: 'page_41';
+  src: url('/fonts/quran/QCF2041.ttf');
+}
+
+@font-face {
+  font-family: 'page_42';
+  src: url('/fonts/quran/QCF2042.ttf');
+}
+
+@font-face {
+  font-family: 'page_43';
+  src: url('/fonts/quran/QCF2043.ttf');
+}
+
+@font-face {
+  font-family: 'page_44';
+  src: url('/fonts/quran/QCF2044.ttf');
+}
+
+@font-face {
+  font-family: 'page_45';
+  src: url('/fonts/quran/QCF2045.ttf');
+}
+
+@font-face {
+  font-family: 'page_46';
+  src: url('/fonts/quran/QCF2046.ttf');
+}
+
+@font-face {
+  font-family: 'page_47';
+  src: url('/fonts/quran/QCF2047.ttf');
+}
+
+@font-face {
+  font-family: 'page_48';
+  src: url('/fonts/quran/QCF2048.ttf');
+}
+
+@font-face {
+  font-family: 'page_49';
+  src: url('/fonts/quran/QCF2049.ttf');
+}
+
+@font-face {
+  font-family: 'page_50';
+  src: url('/fonts/quran/QCF2050.ttf');
+}
+
+@font-face {
+  font-family: 'page_51';
+  src: url('/fonts/quran/QCF2051.ttf');
+}
+
+@font-face {
+  font-family: 'page_52';
+  src: url('/fonts/quran/QCF2052.ttf');
+}
+
+@font-face {
+  font-family: 'page_53';
+  src: url('/fonts/quran/QCF2053.ttf');
+}
+
+@font-face {
+  font-family: 'page_54';
+  src: url('/fonts/quran/QCF2054.ttf');
+}
+
+@font-face {
+  font-family: 'page_55';
+  src: url('/fonts/quran/QCF2055.ttf');
+}
+
+@font-face {
+  font-family: 'page_56';
+  src: url('/fonts/quran/QCF2056.ttf');
+}
+
+@font-face {
+  font-family: 'page_57';
+  src: url('/fonts/quran/QCF2057.ttf');
+}
+
+@font-face {
+  font-family: 'page_58';
+  src: url('/fonts/quran/QCF2058.ttf');
+}
+
+@font-face {
+  font-family: 'page_59';
+  src: url('/fonts/quran/QCF2059.ttf');
+}
+
+@font-face {
+  font-family: 'page_60';
+  src: url('/fonts/quran/QCF2060.ttf');
+}
+
+@font-face {
+  font-family: 'page_61';
+  src: url('/fonts/quran/QCF2061.ttf');
+}
+
+@font-face {
+  font-family: 'page_62';
+  src: url('/fonts/quran/QCF2062.ttf');
+}
+
+@font-face {
+  font-family: 'page_63';
+  src: url('/fonts/quran/QCF2063.ttf');
+}
+
+@font-face {
+  font-family: 'page_64';
+  src: url('/fonts/quran/QCF2064.ttf');
+}
+
+@font-face {
+  font-family: 'page_65';
+  src: url('/fonts/quran/QCF2065.ttf');
+}
+
+@font-face {
+  font-family: 'page_66';
+  src: url('/fonts/quran/QCF2066.ttf');
+}
+
+@font-face {
+  font-family: 'page_67';
+  src: url('/fonts/quran/QCF2067.ttf');
+}
+
+@font-face {
+  font-family: 'page_68';
+  src: url('/fonts/quran/QCF2068.ttf');
+}
+
+@font-face {
+  font-family: 'page_69';
+  src: url('/fonts/quran/QCF2069.ttf');
+}
+
+@font-face {
+  font-family: 'page_70';
+  src: url('/fonts/quran/QCF2070.ttf');
+}
+
+@font-face {
+  font-family: 'page_71';
+  src: url('/fonts/quran/QCF2071.ttf');
+}
+
+@font-face {
+  font-family: 'page_72';
+  src: url('/fonts/quran/QCF2072.ttf');
+}
+
+@font-face {
+  font-family: 'page_73';
+  src: url('/fonts/quran/QCF2073.ttf');
+}
+
+@font-face {
+  font-family: 'page_74';
+  src: url('/fonts/quran/QCF2074.ttf');
+}
+
+@font-face {
+  font-family: 'page_75';
+  src: url('/fonts/quran/QCF2075.ttf');
+}
+
+@font-face {
+  font-family: 'page_76';
+  src: url('/fonts/quran/QCF2076.ttf');
+}
+
+@font-face {
+  font-family: 'page_77';
+  src: url('/fonts/quran/QCF2077.ttf');
+}
+
+@font-face {
+  font-family: 'page_78';
+  src: url('/fonts/quran/QCF2078.ttf');
+}
+
+@font-face {
+  font-family: 'page_79';
+  src: url('/fonts/quran/QCF2079.ttf');
+}
+
+@font-face {
+  font-family: 'page_80';
+  src: url('/fonts/quran/QCF2080.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2081.ttf to QCF2120.ttf */
+@font-face {
+  font-family: 'page_81';
+  src: url('/fonts/quran/QCF2081.ttf');
+}
+
+@font-face {
+  font-family: 'page_82';
+  src: url('/fonts/quran/QCF2082.ttf');
+}
+
+@font-face {
+  font-family: 'page_83';
+  src: url('/fonts/quran/QCF2083.ttf');
+}
+
+@font-face {
+  font-family: 'page_84';
+  src: url('/fonts/quran/QCF2084.ttf');
+}
+
+@font-face {
+  font-family: 'page_85';
+  src: url('/fonts/quran/QCF2085.ttf');
+}
+
+@font-face {
+  font-family: 'page_86';
+  src: url('/fonts/quran/QCF2086.ttf');
+}
+
+@font-face {
+  font-family: 'page_87';
+  src: url('/fonts/quran/QCF2087.ttf');
+}
+
+@font-face {
+  font-family: 'page_88';
+  src: url('/fonts/quran/QCF2088.ttf');
+}
+
+@font-face {
+  font-family: 'page_89';
+  src: url('/fonts/quran/QCF2089.ttf');
+}
+
+@font-face {
+  font-family: 'page_90';
+  src: url('/fonts/quran/QCF2090.ttf');
+}
+
+@font-face {
+  font-family: 'page_91';
+  src: url('/fonts/quran/QCF2091.ttf');
+}
+
+@font-face {
+  font-family: 'page_92';
+  src: url('/fonts/quran/QCF2092.ttf');
+}
+
+@font-face {
+  font-family: 'page_93';
+  src: url('/fonts/quran/QCF2093.ttf');
+}
+
+@font-face {
+  font-family: 'page_94';
+  src: url('/fonts/quran/QCF2094.ttf');
+}
+
+@font-face {
+  font-family: 'page_95';
+  src: url('/fonts/quran/QCF2095.ttf');
+}
+
+@font-face {
+  font-family: 'page_96';
+  src: url('/fonts/quran/QCF2096.ttf');
+}
+
+@font-face {
+  font-family: 'page_97';
+  src: url('/fonts/quran/QCF2097.ttf');
+}
+
+@font-face {
+  font-family: 'page_98';
+  src: url('/fonts/quran/QCF2098.ttf');
+}
+
+@font-face {
+  font-family: 'page_99';
+  src: url('/fonts/quran/QCF2099.ttf');
+}
+
+@font-face {
+  font-family: 'page_100';
+  src: url('/fonts/quran/QCF2100.ttf');
+}
+
+@font-face {
+  font-family: 'page_101';
+  src: url('/fonts/quran/QCF2101.ttf');
+}
+
+@font-face {
+  font-family: 'page_102';
+  src: url('/fonts/quran/QCF2102.ttf');
+}
+
+@font-face {
+  font-family: 'page_103';
+  src: url('/fonts/quran/QCF2103.ttf');
+}
+
+@font-face {
+  font-family: 'page_104';
+  src: url('/fonts/quran/QCF2104.ttf');
+}
+
+@font-face {
+  font-family: 'page_105';
+  src: url('/fonts/quran/QCF2105.ttf');
+}
+
+@font-face {
+  font-family: 'page_106';
+  src: url('/fonts/quran/QCF2106.ttf');
+}
+
+@font-face {
+  font-family: 'page_107';
+  src: url('/fonts/quran/QCF2107.ttf');
+}
+
+@font-face {
+  font-family: 'page_108';
+  src: url('/fonts/quran/QCF2108.ttf');
+}
+
+@font-face {
+  font-family: 'page_109';
+  src: url('/fonts/quran/QCF2109.ttf');
+}
+
+@font-face {
+  font-family: 'page_110';
+  src: url('/fonts/quran/QCF2110.ttf');
+}
+
+@font-face {
+  font-family: 'page_111';
+  src: url('/fonts/quran/QCF2111.ttf');
+}
+
+@font-face {
+  font-family: 'page_112';
+  src: url('/fonts/quran/QCF2112.ttf');
+}
+
+@font-face {
+  font-family: 'page_113';
+  src: url('/fonts/quran/QCF2113.ttf');
+}
+
+@font-face {
+  font-family: 'page_114';
+  src: url('/fonts/quran/QCF2114.ttf');
+}
+
+@font-face {
+  font-family: 'page_115';
+  src: url('/fonts/quran/QCF2115.ttf');
+}
+
+@font-face {
+  font-family: 'page_116';
+  src: url('/fonts/quran/QCF2116.ttf');
+}
+
+@font-face {
+  font-family: 'page_117';
+  src: url('/fonts/quran/QCF2117.ttf');
+}
+
+@font-face {
+  font-family: 'page_118';
+  src: url('/fonts/quran/QCF2118.ttf');
+}
+
+@font-face {
+  font-family: 'page_119';
+  src: url('/fonts/quran/QCF2119.ttf');
+}
+
+@font-face {
+  font-family: 'page_120';
+  src: url('/fonts/quran/QCF2120.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2121.ttf to QCF2160.ttf */
+@font-face {
+  font-family: 'page_121';
+  src: url('/fonts/quran/QCF2121.ttf');
+}
+
+@font-face {
+  font-family: 'page_122';
+  src: url('/fonts/quran/QCF2122.ttf');
+}
+
+@font-face {
+  font-family: 'page_123';
+  src: url('/fonts/quran/QCF2123.ttf');
+}
+
+@font-face {
+  font-family: 'page_124';
+  src: url('/fonts/quran/QCF2124.ttf');
+}
+
+@font-face {
+  font-family: 'page_125';
+  src: url('/fonts/quran/QCF2125.ttf');
+}
+
+@font-face {
+  font-family: 'page_126';
+  src: url('/fonts/quran/QCF2126.ttf');
+}
+
+@font-face {
+  font-family: 'page_127';
+  src: url('/fonts/quran/QCF2127.ttf');
+}
+
+@font-face {
+  font-family: 'page_128';
+  src: url('/fonts/quran/QCF2128.ttf');
+}
+
+@font-face {
+  font-family: 'page_129';
+  src: url('/fonts/quran/QCF2129.ttf');
+}
+
+@font-face {
+  font-family: 'page_130';
+  src: url('/fonts/quran/QCF2130.ttf');
+}
+
+@font-face {
+  font-family: 'page_131';
+  src: url('/fonts/quran/QCF2131.ttf');
+}
+
+@font-face {
+  font-family: 'page_132';
+  src: url('/fonts/quran/QCF2132.ttf');
+}
+
+@font-face {
+  font-family: 'page_133';
+  src: url('/fonts/quran/QCF2133.ttf');
+}
+
+@font-face {
+  font-family: 'page_134';
+  src: url('/fonts/quran/QCF2134.ttf');
+}
+
+@font-face {
+  font-family: 'page_135';
+  src: url('/fonts/quran/QCF2135.ttf');
+}
+
+@font-face {
+  font-family: 'page_136';
+  src: url('/fonts/quran/QCF2136.ttf');
+}
+
+@font-face {
+  font-family: 'page_137';
+  src: url('/fonts/quran/QCF2137.ttf');
+}
+
+@font-face {
+  font-family: 'page_138';
+  src: url('/fonts/quran/QCF2138.ttf');
+}
+
+@font-face {
+  font-family: 'page_139';
+  src: url('/fonts/quran/QCF2139.ttf');
+}
+
+@font-face {
+  font-family: 'page_140';
+  src: url('/fonts/quran/QCF2140.ttf');
+}
+
+@font-face {
+  font-family: 'page_141';
+  src: url('/fonts/quran/QCF2141.ttf');
+}
+
+@font-face {
+  font-family: 'page_142';
+  src: url('/fonts/quran/QCF2142.ttf');
+}
+
+@font-face {
+  font-family: 'page_143';
+  src: url('/fonts/quran/QCF2143.ttf');
+}
+
+@font-face {
+  font-family: 'page_144';
+  src: url('/fonts/quran/QCF2144.ttf');
+}
+
+@font-face {
+  font-family: 'page_145';
+  src: url('/fonts/quran/QCF2145.ttf');
+}
+
+@font-face {
+  font-family: 'page_146';
+  src: url('/fonts/quran/QCF2146.ttf');
+}
+
+@font-face {
+  font-family: 'page_147';
+  src: url('/fonts/quran/QCF2147.ttf');
+}
+
+@font-face {
+  font-family: 'page_148';
+  src: url('/fonts/quran/QCF2148.ttf');
+}
+
+@font-face {
+  font-family: 'page_149';
+  src: url('/fonts/quran/QCF2149.ttf');
+}
+
+@font-face {
+  font-family: 'page_150';
+  src: url('/fonts/quran/QCF2150.ttf');
+}
+
+@font-face {
+  font-family: 'page_151';
+  src: url('/fonts/quran/QCF2151.ttf');
+}
+
+@font-face {
+  font-family: 'page_152';
+  src: url('/fonts/quran/QCF2152.ttf');
+}
+
+@font-face {
+  font-family: 'page_153';
+  src: url('/fonts/quran/QCF2153.ttf');
+}
+
+@font-face {
+  font-family: 'page_154';
+  src: url('/fonts/quran/QCF2154.ttf');
+}
+
+@font-face {
+  font-family: 'page_155';
+  src: url('/fonts/quran/QCF2155.ttf');
+}
+
+@font-face {
+  font-family: 'page_156';
+  src: url('/fonts/quran/QCF2156.ttf');
+}
+
+@font-face {
+  font-family: 'page_157';
+  src: url('/fonts/quran/QCF2157.ttf');
+}
+
+@font-face {
+  font-family: 'page_158';
+  src: url('/fonts/quran/QCF2158.ttf');
+}
+
+@font-face {
+  font-family: 'page_159';
+  src: url('/fonts/quran/QCF2159.ttf');
+}
+
+@font-face {
+  font-family: 'page_160';
+  src: url('/fonts/quran/QCF2160.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2161.ttf to QCF2200.ttf */
+@font-face {
+  font-family: 'page_161';
+  src: url('/fonts/quran/QCF2161.ttf');
+}
+
+@font-face {
+  font-family: 'page_162';
+  src: url('/fonts/quran/QCF2162.ttf');
+}
+
+@font-face {
+  font-family: 'page_163';
+  src: url('/fonts/quran/QCF2163.ttf');
+}
+
+@font-face {
+  font-family: 'page_164';
+  src: url('/fonts/quran/QCF2164.ttf');
+}
+
+@font-face {
+  font-family: 'page_165';
+  src: url('/fonts/quran/QCF2165.ttf');
+}
+
+@font-face {
+  font-family: 'page_166';
+  src: url('/fonts/quran/QCF2166.ttf');
+}
+
+@font-face {
+  font-family: 'page_167';
+  src: url('/fonts/quran/QCF2167.ttf');
+}
+
+@font-face {
+  font-family: 'page_168';
+  src: url('/fonts/quran/QCF2168.ttf');
+}
+
+@font-face {
+  font-family: 'page_169';
+  src: url('/fonts/quran/QCF2169.ttf');
+}
+
+@font-face {
+  font-family: 'page_170';
+  src: url('/fonts/quran/QCF2170.ttf');
+}
+
+@font-face {
+  font-family: 'page_171';
+  src: url('/fonts/quran/QCF2171.ttf');
+}
+
+@font-face {
+  font-family: 'page_172';
+  src: url('/fonts/quran/QCF2172.ttf');
+}
+
+@font-face {
+  font-family: 'page_173';
+  src: url('/fonts/quran/QCF2173.ttf');
+}
+
+@font-face {
+  font-family: 'page_174';
+  src: url('/fonts/quran/QCF2174.ttf');
+}
+
+@font-face {
+  font-family: 'page_175';
+  src: url('/fonts/quran/QCF2175.ttf');
+}
+
+@font-face {
+  font-family: 'page_176';
+  src: url('/fonts/quran/QCF2176.ttf');
+}
+
+@font-face {
+  font-family: 'page_177';
+  src: url('/fonts/quran/QCF2177.ttf');
+}
+
+@font-face {
+  font-family: 'page_178';
+  src: url('/fonts/quran/QCF2178.ttf');
+}
+
+@font-face {
+  font-family: 'page_179';
+  src: url('/fonts/quran/QCF2179.ttf');
+}
+
+@font-face {
+  font-family: 'page_180';
+  src: url('/fonts/quran/QCF2180.ttf');
+}
+
+@font-face {
+  font-family: 'page_181';
+  src: url('/fonts/quran/QCF2181.ttf');
+}
+
+@font-face {
+  font-family: 'page_182';
+  src: url('/fonts/quran/QCF2182.ttf');
+}
+
+@font-face {
+  font-family: 'page_183';
+  src: url('/fonts/quran/QCF2183.ttf');
+}
+
+@font-face {
+  font-family: 'page_184';
+  src: url('/fonts/quran/QCF2184.ttf');
+}
+
+@font-face {
+  font-family: 'page_185';
+  src: url('/fonts/quran/QCF2185.ttf');
+}
+
+@font-face {
+  font-family: 'page_186';
+  src: url('/fonts/quran/QCF2186.ttf');
+}
+
+@font-face {
+  font-family: 'page_187';
+  src: url('/fonts/quran/QCF2187.ttf');
+}
+
+@font-face {
+  font-family: 'page_188';
+  src: url('/fonts/quran/QCF2188.ttf');
+}
+
+@font-face {
+  font-family: 'page_189';
+  src: url('/fonts/quran/QCF2189.ttf');
+}
+
+@font-face {
+  font-family: 'page_190';
+  src: url('/fonts/quran/QCF2190.ttf');
+}
+
+@font-face {
+  font-family: 'page_191';
+  src: url('/fonts/quran/QCF2191.ttf');
+}
+
+@font-face {
+  font-family: 'page_192';
+  src: url('/fonts/quran/QCF2192.ttf');
+}
+
+@font-face {
+  font-family: 'page_193';
+  src: url('/fonts/quran/QCF2193.ttf');
+}
+
+@font-face {
+  font-family: 'page_194';
+  src: url('/fonts/quran/QCF2194.ttf');
+}
+
+@font-face {
+  font-family: 'page_195';
+  src: url('/fonts/quran/QCF2195.ttf');
+}
+
+@font-face {
+  font-family: 'page_196';
+  src: url('/fonts/quran/QCF2196.ttf');
+}
+
+@font-face {
+  font-family: 'page_197';
+  src: url('/fonts/quran/QCF2197.ttf');
+}
+
+@font-face {
+  font-family: 'page_198';
+  src: url('/fonts/quran/QCF2198.ttf');
+}
+
+@font-face {
+  font-family: 'page_199';
+  src: url('/fonts/quran/QCF2199.ttf');
+}
+
+@font-face {
+  font-family: 'page_200';
+  src: url('/fonts/quran/QCF2200.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2201.ttf to QCF2240.ttf */
+@font-face {
+  font-family: 'page_201';
+  src: url('/fonts/quran/QCF2201.ttf');
+}
+
+@font-face {
+  font-family: 'page_202';
+  src: url('/fonts/quran/QCF2202.ttf');
+}
+
+@font-face {
+  font-family: 'page_203';
+  src: url('/fonts/quran/QCF2203.ttf');
+}
+
+@font-face {
+  font-family: 'page_204';
+  src: url('/fonts/quran/QCF2204.ttf');
+}
+
+@font-face {
+  font-family: 'page_205';
+  src: url('/fonts/quran/QCF2205.ttf');
+}
+
+@font-face {
+  font-family: 'page_206';
+  src: url('/fonts/quran/QCF2206.ttf');
+}
+
+@font-face {
+  font-family: 'page_207';
+  src: url('/fonts/quran/QCF2207.ttf');
+}
+
+@font-face {
+  font-family: 'page_208';
+  src: url('/fonts/quran/QCF2208.ttf');
+}
+
+@font-face {
+  font-family: 'page_209';
+  src: url('/fonts/quran/QCF2209.ttf');
+}
+
+@font-face {
+  font-family: 'page_210';
+  src: url('/fonts/quran/QCF2210.ttf');
+}
+
+@font-face {
+  font-family: 'page_211';
+  src: url('/fonts/quran/QCF2211.ttf');
+}
+
+@font-face {
+  font-family: 'page_212';
+  src: url('/fonts/quran/QCF2212.ttf');
+}
+
+@font-face {
+  font-family: 'page_213';
+  src: url('/fonts/quran/QCF2213.ttf');
+}
+
+@font-face {
+  font-family: 'page_214';
+  src: url('/fonts/quran/QCF2214.ttf');
+}
+
+@font-face {
+  font-family: 'page_215';
+  src: url('/fonts/quran/QCF2215.ttf');
+}
+
+@font-face {
+  font-family: 'page_216';
+  src: url('/fonts/quran/QCF2216.ttf');
+}
+
+@font-face {
+  font-family: 'page_217';
+  src: url('/fonts/quran/QCF2217.ttf');
+}
+
+@font-face {
+  font-family: 'page_218';
+  src: url('/fonts/quran/QCF2218.ttf');
+}
+
+@font-face {
+  font-family: 'page_219';
+  src: url('/fonts/quran/QCF2219.ttf');
+}
+
+@font-face {
+  font-family: 'page_220';
+  src: url('/fonts/quran/QCF2220.ttf');
+}
+
+@font-face {
+  font-family: 'page_221';
+  src: url('/fonts/quran/QCF2221.ttf');
+}
+
+@font-face {
+  font-family: 'page_222';
+  src: url('/fonts/quran/QCF2222.ttf');
+}
+
+@font-face {
+  font-family: 'page_223';
+  src: url('/fonts/quran/QCF2223.ttf');
+}
+
+@font-face {
+  font-family: 'page_224';
+  src: url('/fonts/quran/QCF2224.ttf');
+}
+
+@font-face {
+  font-family: 'page_225';
+  src: url('/fonts/quran/QCF2225.ttf');
+}
+
+@font-face {
+  font-family: 'page_226';
+  src: url('/fonts/quran/QCF2226.ttf');
+}
+
+@font-face {
+  font-family: 'page_227';
+  src: url('/fonts/quran/QCF2227.ttf');
+}
+
+@font-face {
+  font-family: 'page_228';
+  src: url('/fonts/quran/QCF2228.ttf');
+}
+
+@font-face {
+  font-family: 'page_229';
+  src: url('/fonts/quran/QCF2229.ttf');
+}
+
+@font-face {
+  font-family: 'page_230';
+  src: url('/fonts/quran/QCF2230.ttf');
+}
+
+@font-face {
+  font-family: 'page_231';
+  src: url('/fonts/quran/QCF2231.ttf');
+}
+
+@font-face {
+  font-family: 'page_232';
+  src: url('/fonts/quran/QCF2232.ttf');
+}
+
+@font-face {
+  font-family: 'page_233';
+  src: url('/fonts/quran/QCF2233.ttf');
+}
+
+@font-face {
+  font-family: 'page_234';
+  src: url('/fonts/quran/QCF2234.ttf');
+}
+
+@font-face {
+  font-family: 'page_235';
+  src: url('/fonts/quran/QCF2235.ttf');
+}
+
+@font-face {
+  font-family: 'page_236';
+  src: url('/fonts/quran/QCF2236.ttf');
+}
+
+@font-face {
+  font-family: 'page_237';
+  src: url('/fonts/quran/QCF2237.ttf');
+}
+
+@font-face {
+  font-family: 'page_238';
+  src: url('/fonts/quran/QCF2238.ttf');
+}
+
+@font-face {
+  font-family: 'page_239';
+  src: url('/fonts/quran/QCF2239.ttf');
+}
+
+@font-face {
+  font-family: 'page_240';
+  src: url('/fonts/quran/QCF2240.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2241.ttf to QCF2280.ttf */
+@font-face {
+  font-family: 'page_241';
+  src: url('/fonts/quran/QCF2241.ttf');
+}
+
+@font-face {
+  font-family: 'page_242';
+  src: url('/fonts/quran/QCF2242.ttf');
+}
+
+@font-face {
+  font-family: 'page_243';
+  src: url('/fonts/quran/QCF2243.ttf');
+}
+
+@font-face {
+  font-family: 'page_244';
+  src: url('/fonts/quran/QCF2244.ttf');
+}
+
+@font-face {
+  font-family: 'page_245';
+  src: url('/fonts/quran/QCF2245.ttf');
+}
+
+@font-face {
+  font-family: 'page_246';
+  src: url('/fonts/quran/QCF2246.ttf');
+}
+
+@font-face {
+  font-family: 'page_247';
+  src: url('/fonts/quran/QCF2247.ttf');
+}
+
+@font-face {
+  font-family: 'page_248';
+  src: url('/fonts/quran/QCF2248.ttf');
+}
+
+@font-face {
+  font-family: 'page_249';
+  src: url('/fonts/quran/QCF2249.ttf');
+}
+
+@font-face {
+  font-family: 'page_250';
+  src: url('/fonts/quran/QCF2250.ttf');
+}
+
+@font-face {
+  font-family: 'page_251';
+  src: url('/fonts/quran/QCF2251.ttf');
+}
+
+@font-face {
+  font-family: 'page_252';
+  src: url('/fonts/quran/QCF2252.ttf');
+}
+
+@font-face {
+  font-family: 'page_253';
+  src: url('/fonts/quran/QCF2253.ttf');
+}
+
+@font-face {
+  font-family: 'page_254';
+  src: url('/fonts/quran/QCF2254.ttf');
+}
+
+@font-face {
+  font-family: 'page_255';
+  src: url('/fonts/quran/QCF2255.ttf');
+}
+
+@font-face {
+  font-family: 'page_256';
+  src: url('/fonts/quran/QCF2256.ttf');
+}
+
+@font-face {
+  font-family: 'page_257';
+  src: url('/fonts/quran/QCF2257.ttf');
+}
+
+@font-face {
+  font-family: 'page_258';
+  src: url('/fonts/quran/QCF2258.ttf');
+}
+
+@font-face {
+  font-family: 'page_259';
+  src: url('/fonts/quran/QCF2259.ttf');
+}
+
+@font-face {
+  font-family: 'page_260';
+  src: url('/fonts/quran/QCF2260.ttf');
+}
+
+@font-face {
+  font-family: 'page_261';
+  src: url('/fonts/quran/QCF2261.ttf');
+}
+
+@font-face {
+  font-family: 'page_262';
+  src: url('/fonts/quran/QCF2262.ttf');
+}
+
+@font-face {
+  font-family: 'page_263';
+  src: url('/fonts/quran/QCF2263.ttf');
+}
+
+@font-face {
+  font-family: 'page_264';
+  src: url('/fonts/quran/QCF2264.ttf');
+}
+
+@font-face {
+  font-family: 'page_265';
+  src: url('/fonts/quran/QCF2265.ttf');
+}
+
+@font-face {
+  font-family: 'page_266';
+  src: url('/fonts/quran/QCF2266.ttf');
+}
+
+@font-face {
+  font-family: 'page_267';
+  src: url('/fonts/quran/QCF2267.ttf');
+}
+
+@font-face {
+  font-family: 'page_268';
+  src: url('/fonts/quran/QCF2268.ttf');
+}
+
+@font-face {
+  font-family: 'page_269';
+  src: url('/fonts/quran/QCF2269.ttf');
+}
+
+@font-face {
+  font-family: 'page_270';
+  src: url('/fonts/quran/QCF2270.ttf');
+}
+
+@font-face {
+  font-family: 'page_271';
+  src: url('/fonts/quran/QCF2271.ttf');
+}
+
+@font-face {
+  font-family: 'page_272';
+  src: url('/fonts/quran/QCF2272.ttf');
+}
+
+@font-face {
+  font-family: 'page_273';
+  src: url('/fonts/quran/QCF2273.ttf');
+}
+
+@font-face {
+  font-family: 'page_274';
+  src: url('/fonts/quran/QCF2274.ttf');
+}
+
+@font-face {
+  font-family: 'page_275';
+  src: url('/fonts/quran/QCF2275.ttf');
+}
+
+@font-face {
+  font-family: 'page_276';
+  src: url('/fonts/quran/QCF2276.ttf');
+}
+
+@font-face {
+  font-family: 'page_277';
+  src: url('/fonts/quran/QCF2277.ttf');
+}
+
+@font-face {
+  font-family: 'page_278';
+  src: url('/fonts/quran/QCF2278.ttf');
+}
+
+@font-face {
+  font-family: 'page_279';
+  src: url('/fonts/quran/QCF2279.ttf');
+}
+
+@font-face {
+  font-family: 'page_280';
+  src: url('/fonts/quran/QCF2280.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2281.ttf to QCF2320.ttf */
+@font-face {
+  font-family: 'page_281';
+  src: url('/fonts/quran/QCF2281.ttf');
+}
+
+@font-face {
+  font-family: 'page_282';
+  src: url('/fonts/quran/QCF2282.ttf');
+}
+
+@font-face {
+  font-family: 'page_283';
+  src: url('/fonts/quran/QCF2283.ttf');
+}
+
+@font-face {
+  font-family: 'page_284';
+  src: url('/fonts/quran/QCF2284.ttf');
+}
+
+@font-face {
+  font-family: 'page_285';
+  src: url('/fonts/quran/QCF2285.ttf');
+}
+
+@font-face {
+  font-family: 'page_286';
+  src: url('/fonts/quran/QCF2286.ttf');
+}
+
+@font-face {
+  font-family: 'page_287';
+  src: url('/fonts/quran/QCF2287.ttf');
+}
+
+@font-face {
+  font-family: 'page_288';
+  src: url('/fonts/quran/QCF2288.ttf');
+}
+
+@font-face {
+  font-family: 'page_289';
+  src: url('/fonts/quran/QCF2289.ttf');
+}
+
+@font-face {
+  font-family: 'page_290';
+  src: url('/fonts/quran/QCF2290.ttf');
+}
+
+@font-face {
+  font-family: 'page_291';
+  src: url('/fonts/quran/QCF2291.ttf');
+}
+
+@font-face {
+  font-family: 'page_292';
+  src: url('/fonts/quran/QCF2292.ttf');
+}
+
+@font-face {
+  font-family: 'page_293';
+  src: url('/fonts/quran/QCF2293.ttf');
+}
+
+@font-face {
+  font-family: 'page_294';
+  src: url('/fonts/quran/QCF2294.ttf');
+}
+
+@font-face {
+  font-family: 'page_295';
+  src: url('/fonts/quran/QCF2295.ttf');
+}
+
+@font-face {
+  font-family: 'page_296';
+  src: url('/fonts/quran/QCF2296.ttf');
+}
+
+@font-face {
+  font-family: 'page_297';
+  src: url('/fonts/quran/QCF2297.ttf');
+}
+
+@font-face {
+  font-family: 'page_298';
+  src: url('/fonts/quran/QCF2298.ttf');
+}
+
+@font-face {
+  font-family: 'page_299';
+  src: url('/fonts/quran/QCF2299.ttf');
+}
+
+@font-face {
+  font-family: 'page_300';
+  src: url('/fonts/quran/QCF2300.ttf');
+}
+
+@font-face {
+  font-family: 'page_301';
+  src: url('/fonts/quran/QCF2301.ttf');
+}
+
+@font-face {
+  font-family: 'page_302';
+  src: url('/fonts/quran/QCF2302.ttf');
+}
+
+@font-face {
+  font-family: 'page_303';
+  src: url('/fonts/quran/QCF2303.ttf');
+}
+
+@font-face {
+  font-family: 'page_304';
+  src: url('/fonts/quran/QCF2304.ttf');
+}
+
+@font-face {
+  font-family: 'page_305';
+  src: url('/fonts/quran/QCF2305.ttf');
+}
+
+@font-face {
+  font-family: 'page_306';
+  src: url('/fonts/quran/QCF2306.ttf');
+}
+
+@font-face {
+  font-family: 'page_307';
+  src: url('/fonts/quran/QCF2307.ttf');
+}
+
+@font-face {
+  font-family: 'page_308';
+  src: url('/fonts/quran/QCF2308.ttf');
+}
+
+@font-face {
+  font-family: 'page_309';
+  src: url('/fonts/quran/QCF2309.ttf');
+}
+
+@font-face {
+  font-family: 'page_310';
+  src: url('/fonts/quran/QCF2310.ttf');
+}
+
+@font-face {
+  font-family: 'page_311';
+  src: url('/fonts/quran/QCF2311.ttf');
+}
+
+@font-face {
+  font-family: 'page_312';
+  src: url('/fonts/quran/QCF2312.ttf');
+}
+
+@font-face {
+  font-family: 'page_313';
+  src: url('/fonts/quran/QCF2313.ttf');
+}
+
+@font-face {
+  font-family: 'page_314';
+  src: url('/fonts/quran/QCF2314.ttf');
+}
+
+@font-face {
+  font-family: 'page_315';
+  src: url('/fonts/quran/QCF2315.ttf');
+}
+
+@font-face {
+  font-family: 'page_316';
+  src: url('/fonts/quran/QCF2316.ttf');
+}
+
+@font-face {
+  font-family: 'page_317';
+  src: url('/fonts/quran/QCF2317.ttf');
+}
+
+@font-face {
+  font-family: 'page_318';
+  src: url('/fonts/quran/QCF2318.ttf');
+}
+
+@font-face {
+  font-family: 'page_319';
+  src: url('/fonts/quran/QCF2319.ttf');
+}
+
+@font-face {
+  font-family: 'page_320';
+  src: url('/fonts/quran/QCF2320.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2321.ttf to QCF2360.ttf */
+@font-face {
+  font-family: 'page_321';
+  src: url('/fonts/quran/QCF2321.ttf');
+}
+
+@font-face {
+  font-family: 'page_322';
+  src: url('/fonts/quran/QCF2322.ttf');
+}
+
+@font-face {
+  font-family: 'page_323';
+  src: url('/fonts/quran/QCF2323.ttf');
+}
+
+@font-face {
+  font-family: 'page_324';
+  src: url('/fonts/quran/QCF2324.ttf');
+}
+
+@font-face {
+  font-family: 'page_325';
+  src: url('/fonts/quran/QCF2325.ttf');
+}
+
+@font-face {
+  font-family: 'page_326';
+  src: url('/fonts/quran/QCF2326.ttf');
+}
+
+@font-face {
+  font-family: 'page_327';
+  src: url('/fonts/quran/QCF2327.ttf');
+}
+
+@font-face {
+  font-family: 'page_328';
+  src: url('/fonts/quran/QCF2328.ttf');
+}
+
+@font-face {
+  font-family: 'page_329';
+  src: url('/fonts/quran/QCF2329.ttf');
+}
+
+@font-face {
+  font-family: 'page_330';
+  src: url('/fonts/quran/QCF2330.ttf');
+}
+
+@font-face {
+  font-family: 'page_331';
+  src: url('/fonts/quran/QCF2331.ttf');
+}
+
+@font-face {
+  font-family: 'page_332';
+  src: url('/fonts/quran/QCF2332.ttf');
+}
+
+@font-face {
+  font-family: 'page_333';
+  src: url('/fonts/quran/QCF2333.ttf');
+}
+
+@font-face {
+  font-family: 'page_334';
+  src: url('/fonts/quran/QCF2334.ttf');
+}
+
+@font-face {
+  font-family: 'page_335';
+  src: url('/fonts/quran/QCF2335.ttf');
+}
+
+@font-face {
+  font-family: 'page_336';
+  src: url('/fonts/quran/QCF2336.ttf');
+}
+
+@font-face {
+  font-family: 'page_337';
+  src: url('/fonts/quran/QCF2337.ttf');
+}
+
+@font-face {
+  font-family: 'page_338';
+  src: url('/fonts/quran/QCF2338.ttf');
+}
+
+@font-face {
+  font-family: 'page_339';
+  src: url('/fonts/quran/QCF2339.ttf');
+}
+
+@font-face {
+  font-family: 'page_340';
+  src: url('/fonts/quran/QCF2340.ttf');
+}
+
+@font-face {
+  font-family: 'page_341';
+  src: url('/fonts/quran/QCF2341.ttf');
+}
+
+@font-face {
+  font-family: 'page_342';
+  src: url('/fonts/quran/QCF2342.ttf');
+}
+
+@font-face {
+  font-family: 'page_343';
+  src: url('/fonts/quran/QCF2343.ttf');
+}
+
+@font-face {
+  font-family: 'page_344';
+  src: url('/fonts/quran/QCF2344.ttf');
+}
+
+@font-face {
+  font-family: 'page_345';
+  src: url('/fonts/quran/QCF2345.ttf');
+}
+
+@font-face {
+  font-family: 'page_346';
+  src: url('/fonts/quran/QCF2346.ttf');
+}
+
+@font-face {
+  font-family: 'page_347';
+  src: url('/fonts/quran/QCF2347.ttf');
+}
+
+@font-face {
+  font-family: 'page_348';
+  src: url('/fonts/quran/QCF2348.ttf');
+}
+
+@font-face {
+  font-family: 'page_349';
+  src: url('/fonts/quran/QCF2349.ttf');
+}
+
+@font-face {
+  font-family: 'page_350';
+  src: url('/fonts/quran/QCF2350.ttf');
+}
+
+@font-face {
+  font-family: 'page_351';
+  src: url('/fonts/quran/QCF2351.ttf');
+}
+
+@font-face {
+  font-family: 'page_352';
+  src: url('/fonts/quran/QCF2352.ttf');
+}
+
+@font-face {
+  font-family: 'page_353';
+  src: url('/fonts/quran/QCF2353.ttf');
+}
+
+@font-face {
+  font-family: 'page_354';
+  src: url('/fonts/quran/QCF2354.ttf');
+}
+
+@font-face {
+  font-family: 'page_355';
+  src: url('/fonts/quran/QCF2355.ttf');
+}
+
+@font-face {
+  font-family: 'page_356';
+  src: url('/fonts/quran/QCF2356.ttf');
+}
+
+@font-face {
+  font-family: 'page_357';
+  src: url('/fonts/quran/QCF2357.ttf');
+}
+
+@font-face {
+  font-family: 'page_358';
+  src: url('/fonts/quran/QCF2358.ttf');
+}
+
+@font-face {
+  font-family: 'page_359';
+  src: url('/fonts/quran/QCF2359.ttf');
+}
+
+@font-face {
+  font-family: 'page_360';
+  src: url('/fonts/quran/QCF2360.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2361.ttf to QCF2400.ttf */
+@font-face {
+  font-family: 'page_361';
+  src: url('/fonts/quran/QCF2361.ttf');
+}
+
+@font-face {
+  font-family: 'page_362';
+  src: url('/fonts/quran/QCF2362.ttf');
+}
+
+@font-face {
+  font-family: 'page_363';
+  src: url('/fonts/quran/QCF2363.ttf');
+}
+
+@font-face {
+  font-family: 'page_364';
+  src: url('/fonts/quran/QCF2364.ttf');
+}
+
+@font-face {
+  font-family: 'page_365';
+  src: url('/fonts/quran/QCF2365.ttf');
+}
+
+@font-face {
+  font-family: 'page_366';
+  src: url('/fonts/quran/QCF2366.ttf');
+}
+
+@font-face {
+  font-family: 'page_367';
+  src: url('/fonts/quran/QCF2367.ttf');
+}
+
+@font-face {
+  font-family: 'page_368';
+  src: url('/fonts/quran/QCF2368.ttf');
+}
+
+@font-face {
+  font-family: 'page_369';
+  src: url('/fonts/quran/QCF2369.ttf');
+}
+
+@font-face {
+  font-family: 'page_370';
+  src: url('/fonts/quran/QCF2370.ttf');
+}
+
+@font-face {
+  font-family: 'page_371';
+  src: url('/fonts/quran/QCF2371.ttf');
+}
+
+@font-face {
+  font-family: 'page_372';
+  src: url('/fonts/quran/QCF2372.ttf');
+}
+
+@font-face {
+  font-family: 'page_373';
+  src: url('/fonts/quran/QCF2373.ttf');
+}
+
+@font-face {
+  font-family: 'page_374';
+  src: url('/fonts/quran/QCF2374.ttf');
+}
+
+@font-face {
+  font-family: 'page_375';
+  src: url('/fonts/quran/QCF2375.ttf');
+}
+
+@font-face {
+  font-family: 'page_376';
+  src: url('/fonts/quran/QCF2376.ttf');
+}
+
+@font-face {
+  font-family: 'page_377';
+  src: url('/fonts/quran/QCF2377.ttf');
+}
+
+@font-face {
+  font-family: 'page_378';
+  src: url('/fonts/quran/QCF2378.ttf');
+}
+
+@font-face {
+  font-family: 'page_379';
+  src: url('/fonts/quran/QCF2379.ttf');
+}
+
+@font-face {
+  font-family: 'page_380';
+  src: url('/fonts/quran/QCF2380.ttf');
+}
+
+@font-face {
+  font-family: 'page_381';
+  src: url('/fonts/quran/QCF2381.ttf');
+}
+
+@font-face {
+  font-family: 'page_382';
+  src: url('/fonts/quran/QCF2382.ttf');
+}
+
+@font-face {
+  font-family: 'page_383';
+  src: url('/fonts/quran/QCF2383.ttf');
+}
+
+@font-face {
+  font-family: 'page_384';
+  src: url('/fonts/quran/QCF2384.ttf');
+}
+
+@font-face {
+  font-family: 'page_385';
+  src: url('/fonts/quran/QCF2385.ttf');
+}
+
+@font-face {
+  font-family: 'page_386';
+  src: url('/fonts/quran/QCF2386.ttf');
+}
+
+@font-face {
+  font-family: 'page_387';
+  src: url('/fonts/quran/QCF2387.ttf');
+}
+
+@font-face {
+  font-family: 'page_388';
+  src: url('/fonts/quran/QCF2388.ttf');
+}
+
+@font-face {
+  font-family: 'page_389';
+  src: url('/fonts/quran/QCF2389.ttf');
+}
+
+@font-face {
+  font-family: 'page_390';
+  src: url('/fonts/quran/QCF2390.ttf');
+}
+
+@font-face {
+  font-family: 'page_391';
+  src: url('/fonts/quran/QCF2391.ttf');
+}
+
+@font-face {
+  font-family: 'page_392';
+  src: url('/fonts/quran/QCF2392.ttf');
+}
+
+@font-face {
+  font-family: 'page_393';
+  src: url('/fonts/quran/QCF2393.ttf');
+}
+
+@font-face {
+  font-family: 'page_394';
+  src: url('/fonts/quran/QCF2394.ttf');
+}
+
+@font-face {
+  font-family: 'page_395';
+  src: url('/fonts/quran/QCF2395.ttf');
+}
+
+@font-face {
+  font-family: 'page_396';
+  src: url('/fonts/quran/QCF2396.ttf');
+}
+
+@font-face {
+  font-family: 'page_397';
+  src: url('/fonts/quran/QCF2397.ttf');
+}
+
+@font-face {
+  font-family: 'page_398';
+  src: url('/fonts/quran/QCF2398.ttf');
+}
+
+@font-face {
+  font-family: 'page_399';
+  src: url('/fonts/quran/QCF2399.ttf');
+}
+
+@font-face {
+  font-family: 'page_400';
+  src: url('/fonts/quran/QCF2400.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2401.ttf to QCF2440.ttf */
+@font-face {
+  font-family: 'page_401';
+  src: url('/fonts/quran/QCF2401.ttf');
+}
+
+@font-face {
+  font-family: 'page_402';
+  src: url('/fonts/quran/QCF2402.ttf');
+}
+
+@font-face {
+  font-family: 'page_403';
+  src: url('/fonts/quran/QCF2403.ttf');
+}
+
+@font-face {
+  font-family: 'page_404';
+  src: url('/fonts/quran/QCF2404.ttf');
+}
+
+@font-face {
+  font-family: 'page_405';
+  src: url('/fonts/quran/QCF2405.ttf');
+}
+
+@font-face {
+  font-family: 'page_406';
+  src: url('/fonts/quran/QCF2406.ttf');
+}
+
+@font-face {
+  font-family: 'page_407';
+  src: url('/fonts/quran/QCF2407.ttf');
+}
+
+@font-face {
+  font-family: 'page_408';
+  src: url('/fonts/quran/QCF2408.ttf');
+}
+
+@font-face {
+  font-family: 'page_409';
+  src: url('/fonts/quran/QCF2409.ttf');
+}
+
+@font-face {
+  font-family: 'page_410';
+  src: url('/fonts/quran/QCF2410.ttf');
+}
+
+@font-face {
+  font-family: 'page_411';
+  src: url('/fonts/quran/QCF2411.ttf');
+}
+
+@font-face {
+  font-family: 'page_412';
+  src: url('/fonts/quran/QCF2412.ttf');
+}
+
+@font-face {
+  font-family: 'page_413';
+  src: url('/fonts/quran/QCF2413.ttf');
+}
+
+@font-face {
+  font-family: 'page_414';
+  src: url('/fonts/quran/QCF2414.ttf');
+}
+
+@font-face {
+  font-family: 'page_415';
+  src: url('/fonts/quran/QCF2415.ttf');
+}
+
+@font-face {
+  font-family: 'page_416';
+  src: url('/fonts/quran/QCF2416.ttf');
+}
+
+@font-face {
+  font-family: 'page_417';
+  src: url('/fonts/quran/QCF2417.ttf');
+}
+
+@font-face {
+  font-family: 'page_418';
+  src: url('/fonts/quran/QCF2418.ttf');
+}
+
+@font-face {
+  font-family: 'page_419';
+  src: url('/fonts/quran/QCF2419.ttf');
+}
+
+@font-face {
+  font-family: 'page_420';
+  src: url('/fonts/quran/QCF2420.ttf');
+}
+
+@font-face {
+  font-family: 'page_421';
+  src: url('/fonts/quran/QCF2421.ttf');
+}
+
+@font-face {
+  font-family: 'page_422';
+  src: url('/fonts/quran/QCF2422.ttf');
+}
+
+@font-face {
+  font-family: 'page_423';
+  src: url('/fonts/quran/QCF2423.ttf');
+}
+
+@font-face {
+  font-family: 'page_424';
+  src: url('/fonts/quran/QCF2424.ttf');
+}
+
+@font-face {
+  font-family: 'page_425';
+  src: url('/fonts/quran/QCF2425.ttf');
+}
+
+@font-face {
+  font-family: 'page_426';
+  src: url('/fonts/quran/QCF2426.ttf');
+}
+
+@font-face {
+  font-family: 'page_427';
+  src: url('/fonts/quran/QCF2427.ttf');
+}
+
+@font-face {
+  font-family: 'page_428';
+  src: url('/fonts/quran/QCF2428.ttf');
+}
+
+@font-face {
+  font-family: 'page_429';
+  src: url('/fonts/quran/QCF2429.ttf');
+}
+
+@font-face {
+  font-family: 'page_430';
+  src: url('/fonts/quran/QCF2430.ttf');
+}
+
+@font-face {
+  font-family: 'page_431';
+  src: url('/fonts/quran/QCF2431.ttf');
+}
+
+@font-face {
+  font-family: 'page_432';
+  src: url('/fonts/quran/QCF2432.ttf');
+}
+
+@font-face {
+  font-family: 'page_433';
+  src: url('/fonts/quran/QCF2433.ttf');
+}
+
+@font-face {
+  font-family: 'page_434';
+  src: url('/fonts/quran/QCF2434.ttf');
+}
+
+@font-face {
+  font-family: 'page_435';
+  src: url('/fonts/quran/QCF2435.ttf');
+}
+
+@font-face {
+  font-family: 'page_436';
+  src: url('/fonts/quran/QCF2436.ttf');
+}
+
+@font-face {
+  font-family: 'page_437';
+  src: url('/fonts/quran/QCF2437.ttf');
+}
+
+@font-face {
+  font-family: 'page_438';
+  src: url('/fonts/quran/QCF2438.ttf');
+}
+
+@font-face {
+  font-family: 'page_439';
+  src: url('/fonts/quran/QCF2439.ttf');
+}
+
+@font-face {
+  font-family: 'page_440';
+  src: url('/fonts/quran/QCF2440.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2441.ttf to QCF2480.ttf */
+@font-face {
+  font-family: 'page_441';
+  src: url('/fonts/quran/QCF2441.ttf');
+}
+
+@font-face {
+  font-family: 'page_442';
+  src: url('/fonts/quran/QCF2442.ttf');
+}
+
+@font-face {
+  font-family: 'page_443';
+  src: url('/fonts/quran/QCF2443.ttf');
+}
+
+@font-face {
+  font-family: 'page_444';
+  src: url('/fonts/quran/QCF2444.ttf');
+}
+
+@font-face {
+  font-family: 'page_445';
+  src: url('/fonts/quran/QCF2445.ttf');
+}
+
+@font-face {
+  font-family: 'page_446';
+  src: url('/fonts/quran/QCF2446.ttf');
+}
+
+@font-face {
+  font-family: 'page_447';
+  src: url('/fonts/quran/QCF2447.ttf');
+}
+
+@font-face {
+  font-family: 'page_448';
+  src: url('/fonts/quran/QCF2448.ttf');
+}
+
+@font-face {
+  font-family: 'page_449';
+  src: url('/fonts/quran/QCF2449.ttf');
+}
+
+@font-face {
+  font-family: 'page_450';
+  src: url('/fonts/quran/QCF2450.ttf');
+}
+
+@font-face {
+  font-family: 'page_451';
+  src: url('/fonts/quran/QCF2451.ttf');
+}
+
+@font-face {
+  font-family: 'page_452';
+  src: url('/fonts/quran/QCF2452.ttf');
+}
+
+@font-face {
+  font-family: 'page_453';
+  src: url('/fonts/quran/QCF2453.ttf');
+}
+
+@font-face {
+  font-family: 'page_454';
+  src: url('/fonts/quran/QCF2454.ttf');
+}
+
+@font-face {
+  font-family: 'page_455';
+  src: url('/fonts/quran/QCF2455.ttf');
+}
+
+@font-face {
+  font-family: 'page_456';
+  src: url('/fonts/quran/QCF2456.ttf');
+}
+
+@font-face {
+  font-family: 'page_457';
+  src: url('/fonts/quran/QCF2457.ttf');
+}
+
+@font-face {
+  font-family: 'page_458';
+  src: url('/fonts/quran/QCF2458.ttf');
+}
+
+@font-face {
+  font-family: 'page_459';
+  src: url('/fonts/quran/QCF2459.ttf');
+}
+
+@font-face {
+  font-family: 'page_460';
+  src: url('/fonts/quran/QCF2460.ttf');
+}
+
+@font-face {
+  font-family: 'page_461';
+  src: url('/fonts/quran/QCF2461.ttf');
+}
+
+@font-face {
+  font-family: 'page_462';
+  src: url('/fonts/quran/QCF2462.ttf');
+}
+
+@font-face {
+  font-family: 'page_463';
+  src: url('/fonts/quran/QCF2463.ttf');
+}
+
+@font-face {
+  font-family: 'page_464';
+  src: url('/fonts/quran/QCF2464.ttf');
+}
+
+@font-face {
+  font-family: 'page_465';
+  src: url('/fonts/quran/QCF2465.ttf');
+}
+
+@font-face {
+  font-family: 'page_466';
+  src: url('/fonts/quran/QCF2466.ttf');
+}
+
+@font-face {
+  font-family: 'page_467';
+  src: url('/fonts/quran/QCF2467.ttf');
+}
+
+@font-face {
+  font-family: 'page_468';
+  src: url('/fonts/quran/QCF2468.ttf');
+}
+
+@font-face {
+  font-family: 'page_469';
+  src: url('/fonts/quran/QCF2469.ttf');
+}
+
+@font-face {
+  font-family: 'page_470';
+  src: url('/fonts/quran/QCF2470.ttf');
+}
+
+@font-face {
+  font-family: 'page_471';
+  src: url('/fonts/quran/QCF2471.ttf');
+}
+
+@font-face {
+  font-family: 'page_472';
+  src: url('/fonts/quran/QCF2472.ttf');
+}
+
+@font-face {
+  font-family: 'page_473';
+  src: url('/fonts/quran/QCF2473.ttf');
+}
+
+@font-face {
+  font-family: 'page_474';
+  src: url('/fonts/quran/QCF2474.ttf');
+}
+
+@font-face {
+  font-family: 'page_475';
+  src: url('/fonts/quran/QCF2475.ttf');
+}
+
+@font-face {
+  font-family: 'page_476';
+  src: url('/fonts/quran/QCF2476.ttf');
+}
+
+@font-face {
+  font-family: 'page_477';
+  src: url('/fonts/quran/QCF2477.ttf');
+}
+
+@font-face {
+  font-family: 'page_478';
+  src: url('/fonts/quran/QCF2478.ttf');
+}
+
+@font-face {
+  font-family: 'page_479';
+  src: url('/fonts/quran/QCF2479.ttf');
+}
+
+@font-face {
+  font-family: 'page_480';
+  src: url('/fonts/quran/QCF2480.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2481.ttf to QCF2520.ttf */
+@font-face {
+  font-family: 'page_481';
+  src: url('/fonts/quran/QCF2481.ttf');
+}
+
+@font-face {
+  font-family: 'page_482';
+  src: url('/fonts/quran/QCF2482.ttf');
+}
+
+@font-face {
+  font-family: 'page_483';
+  src: url('/fonts/quran/QCF2483.ttf');
+}
+
+@font-face {
+  font-family: 'page_484';
+  src: url('/fonts/quran/QCF2484.ttf');
+}
+
+@font-face {
+  font-family: 'page_485';
+  src: url('/fonts/quran/QCF2485.ttf');
+}
+
+@font-face {
+  font-family: 'page_486';
+  src: url('/fonts/quran/QCF2486.ttf');
+}
+
+@font-face {
+  font-family: 'page_487';
+  src: url('/fonts/quran/QCF2487.ttf');
+}
+
+@font-face {
+  font-family: 'page_488';
+  src: url('/fonts/quran/QCF2488.ttf');
+}
+
+@font-face {
+  font-family: 'page_489';
+  src: url('/fonts/quran/QCF2489.ttf');
+}
+
+@font-face {
+  font-family: 'page_490';
+  src: url('/fonts/quran/QCF2490.ttf');
+}
+
+@font-face {
+  font-family: 'page_491';
+  src: url('/fonts/quran/QCF2491.ttf');
+}
+
+@font-face {
+  font-family: 'page_492';
+  src: url('/fonts/quran/QCF2492.ttf');
+}
+
+@font-face {
+  font-family: 'page_493';
+  src: url('/fonts/quran/QCF2493.ttf');
+}
+
+@font-face {
+  font-family: 'page_494';
+  src: url('/fonts/quran/QCF2494.ttf');
+}
+
+@font-face {
+  font-family: 'page_495';
+  src: url('/fonts/quran/QCF2495.ttf');
+}
+
+@font-face {
+  font-family: 'page_496';
+  src: url('/fonts/quran/QCF2496.ttf');
+}
+
+@font-face {
+  font-family: 'page_497';
+  src: url('/fonts/quran/QCF2497.ttf');
+}
+
+@font-face {
+  font-family: 'page_498';
+  src: url('/fonts/quran/QCF2498.ttf');
+}
+
+@font-face {
+  font-family: 'page_499';
+  src: url('/fonts/quran/QCF2499.ttf');
+}
+
+@font-face {
+  font-family: 'page_500';
+  src: url('/fonts/quran/QCF2500.ttf');
+}
+
+@font-face {
+  font-family: 'page_501';
+  src: url('/fonts/quran/QCF2501.ttf');
+}
+
+@font-face {
+  font-family: 'page_502';
+  src: url('/fonts/quran/QCF2502.ttf');
+}
+
+@font-face {
+  font-family: 'page_503';
+  src: url('/fonts/quran/QCF2503.ttf');
+}
+
+@font-face {
+  font-family: 'page_504';
+  src: url('/fonts/quran/QCF2504.ttf');
+}
+
+@font-face {
+  font-family: 'page_505';
+  src: url('/fonts/quran/QCF2505.ttf');
+}
+
+@font-face {
+  font-family: 'page_506';
+  src: url('/fonts/quran/QCF2506.ttf');
+}
+
+@font-face {
+  font-family: 'page_507';
+  src: url('/fonts/quran/QCF2507.ttf');
+}
+
+@font-face {
+  font-family: 'page_508';
+  src: url('/fonts/quran/QCF2508.ttf');
+}
+
+@font-face {
+  font-family: 'page_509';
+  src: url('/fonts/quran/QCF2509.ttf');
+}
+
+@font-face {
+  font-family: 'page_510';
+  src: url('/fonts/quran/QCF2510.ttf');
+}
+
+@font-face {
+  font-family: 'page_511';
+  src: url('/fonts/quran/QCF2511.ttf');
+}
+
+@font-face {
+  font-family: 'page_512';
+  src: url('/fonts/quran/QCF2512.ttf');
+}
+
+@font-face {
+  font-family: 'page_513';
+  src: url('/fonts/quran/QCF2513.ttf');
+}
+
+@font-face {
+  font-family: 'page_514';
+  src: url('/fonts/quran/QCF2514.ttf');
+}
+
+@font-face {
+  font-family: 'page_515';
+  src: url('/fonts/quran/QCF2515.ttf');
+}
+
+@font-face {
+  font-family: 'page_516';
+  src: url('/fonts/quran/QCF2516.ttf');
+}
+
+@font-face {
+  font-family: 'page_517';
+  src: url('/fonts/quran/QCF2517.ttf');
+}
+
+@font-face {
+  font-family: 'page_518';
+  src: url('/fonts/quran/QCF2518.ttf');
+}
+
+@font-face {
+  font-family: 'page_519';
+  src: url('/fonts/quran/QCF2519.ttf');
+}
+
+@font-face {
+  font-family: 'page_520';
+  src: url('/fonts/quran/QCF2520.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2521.ttf to QCF2560.ttf */
+@font-face {
+  font-family: 'page_521';
+  src: url('/fonts/quran/QCF2521.ttf');
+}
+
+@font-face {
+  font-family: 'page_522';
+  src: url('/fonts/quran/QCF2522.ttf');
+}
+
+@font-face {
+  font-family: 'page_523';
+  src: url('/fonts/quran/QCF2523.ttf');
+}
+
+@font-face {
+  font-family: 'page_524';
+  src: url('/fonts/quran/QCF2524.ttf');
+}
+
+@font-face {
+  font-family: 'page_525';
+  src: url('/fonts/quran/QCF2525.ttf');
+}
+
+@font-face {
+  font-family: 'page_526';
+  src: url('/fonts/quran/QCF2526.ttf');
+}
+
+@font-face {
+  font-family: 'page_527';
+  src: url('/fonts/quran/QCF2527.ttf');
+}
+
+@font-face {
+  font-family: 'page_528';
+  src: url('/fonts/quran/QCF2528.ttf');
+}
+
+@font-face {
+  font-family: 'page_529';
+  src: url('/fonts/quran/QCF2529.ttf');
+}
+
+@font-face {
+  font-family: 'page_530';
+  src: url('/fonts/quran/QCF2530.ttf');
+}
+
+@font-face {
+  font-family: 'page_531';
+  src: url('/fonts/quran/QCF2531.ttf');
+}
+
+@font-face {
+  font-family: 'page_532';
+  src: url('/fonts/quran/QCF2532.ttf');
+}
+
+@font-face {
+  font-family: 'page_533';
+  src: url('/fonts/quran/QCF2533.ttf');
+}
+
+@font-face {
+  font-family: 'page_534';
+  src: url('/fonts/quran/QCF2534.ttf');
+}
+
+@font-face {
+  font-family: 'page_535';
+  src: url('/fonts/quran/QCF2535.ttf');
+}
+
+@font-face {
+  font-family: 'page_536';
+  src: url('/fonts/quran/QCF2536.ttf');
+}
+
+@font-face {
+  font-family: 'page_537';
+  src: url('/fonts/quran/QCF2537.ttf');
+}
+
+@font-face {
+  font-family: 'page_538';
+  src: url('/fonts/quran/QCF2538.ttf');
+}
+
+@font-face {
+  font-family: 'page_539';
+  src: url('/fonts/quran/QCF2539.ttf');
+}
+
+@font-face {
+  font-family: 'page_540';
+  src: url('/fonts/quran/QCF2540.ttf');
+}
+
+@font-face {
+  font-family: 'page_541';
+  src: url('/fonts/quran/QCF2541.ttf');
+}
+
+@font-face {
+  font-family: 'page_542';
+  src: url('/fonts/quran/QCF2542.ttf');
+}
+
+@font-face {
+  font-family: 'page_543';
+  src: url('/fonts/quran/QCF2543.ttf');
+}
+
+@font-face {
+  font-family: 'page_544';
+  src: url('/fonts/quran/QCF2544.ttf');
+}
+
+@font-face {
+  font-family: 'page_545';
+  src: url('/fonts/quran/QCF2545.ttf');
+}
+
+@font-face {
+  font-family: 'page_546';
+  src: url('/fonts/quran/QCF2546.ttf');
+}
+
+@font-face {
+  font-family: 'page_547';
+  src: url('/fonts/quran/QCF2547.ttf');
+}
+
+@font-face {
+  font-family: 'page_548';
+  src: url('/fonts/quran/QCF2548.ttf');
+}
+
+@font-face {
+  font-family: 'page_549';
+  src: url('/fonts/quran/QCF2549.ttf');
+}
+
+@font-face {
+  font-family: 'page_550';
+  src: url('/fonts/quran/QCF2550.ttf');
+}
+
+@font-face {
+  font-family: 'page_551';
+  src: url('/fonts/quran/QCF2551.ttf');
+}
+
+@font-face {
+  font-family: 'page_552';
+  src: url('/fonts/quran/QCF2552.ttf');
+}
+
+@font-face {
+  font-family: 'page_553';
+  src: url('/fonts/quran/QCF2553.ttf');
+}
+
+@font-face {
+  font-family: 'page_554';
+  src: url('/fonts/quran/QCF2554.ttf');
+}
+
+@font-face {
+  font-family: 'page_555';
+  src: url('/fonts/quran/QCF2555.ttf');
+}
+
+@font-face {
+  font-family: 'page_556';
+  src: url('/fonts/quran/QCF2556.ttf');
+}
+
+@font-face {
+  font-family: 'page_557';
+  src: url('/fonts/quran/QCF2557.ttf');
+}
+
+@font-face {
+  font-family: 'page_558';
+  src: url('/fonts/quran/QCF2558.ttf');
+}
+
+@font-face {
+  font-family: 'page_559';
+  src: url('/fonts/quran/QCF2559.ttf');
+}
+
+@font-face {
+  font-family: 'page_560';
+  src: url('/fonts/quran/QCF2560.ttf');
+}
+
+/* Generate @font-face rules for fonts QCF2561.ttf to QCF2604.ttf */
+@font-face {
+  font-family: 'page_561';
+  src: url('/fonts/quran/QCF2561.ttf');
+}
+
+@font-face {
+  font-family: 'page_562';
+  src: url('/fonts/quran/QCF2562.ttf');
+}
+
+@font-face {
+  font-family: 'page_563';
+  src: url('/fonts/quran/QCF2563.ttf');
+}
+
+@font-face {
+  font-family: 'page_564';
+  src: url('/fonts/quran/QCF2564.ttf');
+}
+
+@font-face {
+  font-family: 'page_565';
+  src: url('/fonts/quran/QCF2565.ttf');
+}
+
+@font-face {
+  font-family: 'page_566';
+  src: url('/fonts/quran/QCF2566.ttf');
+}
+
+@font-face {
+  font-family: 'page_567';
+  src: url('/fonts/quran/QCF2567.ttf');
+}
+
+@font-face {
+  font-family: 'page_568';
+  src: url('/fonts/quran/QCF2568.ttf');
+}
+
+@font-face {
+  font-family: 'page_569';
+  src: url('/fonts/quran/QCF2569.ttf');
+}
+
+@font-face {
+  font-family: 'page_570';
+  src: url('/fonts/quran/QCF2570.ttf');
+}
+
+@font-face {
+  font-family: 'page_571';
+  src: url('/fonts/quran/QCF2571.ttf');
+}
+
+@font-face {
+  font-family: 'page_572';
+  src: url('/fonts/quran/QCF2572.ttf');
+}
+
+@font-face {
+  font-family: 'page_573';
+  src: url('/fonts/quran/QCF2573.ttf');
+}
+
+@font-face {
+  font-family: 'page_574';
+  src: url('/fonts/quran/QCF2574.ttf');
+}
+
+@font-face {
+  font-family: 'page_575';
+  src: url('/fonts/quran/QCF2575.ttf');
+}
+
+@font-face {
+  font-family: 'page_576';
+  src: url('/fonts/quran/QCF2576.ttf');
+}
+
+@font-face {
+  font-family: 'page_577';
+  src: url('/fonts/quran/QCF2577.ttf');
+}
+
+@font-face {
+  font-family: 'page_578';
+  src: url('/fonts/quran/QCF2578.ttf');
+}
+
+@font-face {
+  font-family: 'page_579';
+  src: url('/fonts/quran/QCF2579.ttf');
+}
+
+@font-face {
+  font-family: 'page_580';
+  src: url('/fonts/quran/QCF2580.ttf');
+}
+
+@font-face {
+  font-family: 'page_581';
+  src: url('/fonts/quran/QCF2581.ttf');
+}
+
+@font-face {
+  font-family: 'page_582';
+  src: url('/fonts/quran/QCF2582.ttf');
+}
+
+@font-face {
+  font-family: 'page_583';
+  src: url('/fonts/quran/QCF2583.ttf');
+}
+
+@font-face {
+  font-family: 'page_584';
+  src: url('/fonts/quran/QCF2584.ttf');
+}
+
+@font-face {
+  font-family: 'page_585';
+  src: url('/fonts/quran/QCF2585.ttf');
+}
+
+@font-face {
+  font-family: 'page_586';
+  src: url('/fonts/quran/QCF2586.ttf');
+}
+
+@font-face {
+  font-family: 'page_587';
+  src: url('/fonts/quran/QCF2587.ttf');
+}
+
+@font-face {
+  font-family: 'page_588';
+  src: url('/fonts/quran/QCF2588.ttf');
+}
+
+@font-face {
+  font-family: 'page_589';
+  src: url('/fonts/quran/QCF2589.ttf');
+}
+
+@font-face {
+  font-family: 'page_590';
+  src: url('/fonts/quran/QCF2590.ttf');
+}
+
+@font-face {
+  font-family: 'page_591';
+  src: url('/fonts/quran/QCF2591.ttf');
+}
+
+@font-face {
+  font-family: 'page_592';
+  src: url('/fonts/quran/QCF2592.ttf');
+}
+
+@font-face {
+  font-family: 'page_593';
+  src: url('/fonts/quran/QCF2593.ttf');
+}
+
+@font-face {
+  font-family: 'page_594';
+  src: url('/fonts/quran/QCF2594.ttf');
+}
+
+@font-face {
+  font-family: 'page_595';
+  src: url('/fonts/quran/QCF2595.ttf');
+}
+
+@font-face {
+  font-family: 'page_596';
+  src: url('/fonts/quran/QCF2596.ttf');
+}
+
+@font-face {
+  font-family: 'page_597';
+  src: url('/fonts/quran/QCF2597.ttf');
+}
+
+@font-face {
+  font-family: 'page_598';
+  src: url('/fonts/quran/QCF2598.ttf');
+}
+
+@font-face {
+  font-family: 'page_599';
+  src: url('/fonts/quran/QCF2599.ttf');
+}
+
+@font-face {
+  font-family: 'page_600';
+  src: url('/fonts/quran/QCF2600.ttf');
+}
+
+@font-face {
+  font-family: 'page_601';
+  src: url('/fonts/quran/QCF2601.ttf');
+}
+
+@font-face {
+  font-family: 'page_602';
+  src: url('/fonts/quran/QCF2602.ttf');
+}
+
+@font-face {
+  font-family: 'page_603';
+  src: url('/fonts/quran/QCF2603.ttf');
+}
+
+@font-face {
+  font-family: 'page_604';
+  src: url('/fonts/quran/QCF2604.ttf');
+}

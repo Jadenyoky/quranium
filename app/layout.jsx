@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./fonts.css";
 
 const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
   title: "Quranium",
   description: "Website for read , search , listen and mean quran",
