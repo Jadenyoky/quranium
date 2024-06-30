@@ -40,7 +40,6 @@ export default function Home() {
               <div key={k}>
                 <h2
                   style={{
-                    padding: "10px",
                     direction: "rtl",
                     fontFamily: `page_${e.v2_page}`,
                   }}
