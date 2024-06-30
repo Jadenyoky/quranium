@@ -6,11 +6,11 @@ export default function Home() {
   const verse = useRef();
   const [data, setdata] = useState([]);
   const [loading, setloading] = useState(false);
-  let num = 1;
-  const [url, seturl] = useState(
-    `https://api.quran.com/api/v4/quran/verses/code_v2?juz_number=${num}`
-  );
-  const apiVerse = async function () {
+  const [num, setnum] = useState(1);
+  // const [url, seturl] = useState(
+  //   `https://api.quran.com/api/v4/quran/verses/code_v2?juz_number=${num}`
+  // );
+  const apiVerse = async function (url) {
     setloading(false);
 
     const apiA = await axios.get(url);
@@ -18,17 +18,26 @@ export default function Home() {
     console.log(apiA.data);
 
     setloading(true);
+    console.log(url, num);
   };
 
   return (
     <>
       <div>QURANIUM</div>
-      <button onClick={() => apiVerse()}>get</button>
+      <button
+        onClick={() => {
+          const url = `https://api.quran.com/api/v4/quran/verses/code_v2?juz_number=${num}`;
+          setnum(num + 1);
+          apiVerse(url);
+        }}
+      >
+        get
+      </button>
       {loading && data[0].v2_page > 0 ? (
         <div>
           {data.map((e, k) => {
             return (
-              <div>
+              <div key={k}>
                 <h2
                   style={{
                     padding: "10px",
@@ -36,7 +45,6 @@ export default function Home() {
                     fontFamily: `page_${e.v2_page}`,
                   }}
                   ref={verse}
-                  key={k}
                 >
                   {e.code_v2}
                 </h2>
@@ -45,16 +53,29 @@ export default function Home() {
           })}
           <h5
             onClick={() => {
-              seturl(
-                `https://api.quran.com/api/v4/quran/verses/code_v2?juz_number=${
-                  num + 1
-                }`
-              );
-              apiVerse();
+              setnum(num + 1);
+              const url = `https://api.quran.com/api/v4/quran/verses/code_v2?juz_number=${num}`;
+              apiVerse(url);
             }}
           >
-            Get next JUZ ({num + 1})
+            Get next JUZ ({num})
           </h5>
+
+          {num >= 1 ? (
+            <h5
+              onClick={() => {
+                setnum(num - 1);
+                const url = `https://api.quran.com/api/v4/quran/verses/code_v2?juz_number=${
+                  num - 1
+                }`;
+                apiVerse(url);
+              }}
+            >
+              Get prev JUZ ({num - 1})
+            </h5>
+          ) : (
+            "nothing"
+          )}
         </div>
       ) : (
         <h2>loading</h2>
