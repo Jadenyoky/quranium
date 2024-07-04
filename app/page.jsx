@@ -32,7 +32,7 @@ export default function Home() {
     }
   };
   async function isEqual(num) {
-    console.log(num);
+    setresult("loading");
     num.forEach((element) => {
       const font = new FontFace(
         `page_${element}`,
@@ -40,17 +40,21 @@ export default function Home() {
       );
       font.load();
       document.fonts.add(font);
-      console.log(element, font);
+      document.fonts.ready.then(() => {
+        setresult("loaded");
+      });
     });
   }
 
-  const url = `https://api.quran.com/api/v4/quran/verses/code_v2?chapter_number=${surahNum}`;
-  const chapter = async () => {
-    const apiA = await axios.get(url);
+  const chapter = async (id) => {
+    const apiA = await axios.get(
+      `https://api.quran.com/api/v4/quran/verses/code_v2?chapter_number=${id}`
+    );
     const num = apiA.data.verses.map((e) => e.v2_page);
     isEqual(_.uniq(num));
     // console.log(apiA.data);
     setchapter2(apiA.data.verses);
+    console.log(apiA.data);
   };
 
   const url2 = `https://api.quran.com/api/v4/search?q=${query}`;
@@ -90,8 +94,7 @@ export default function Home() {
           <div key={k}>
             <h3
               onClick={() => {
-                chapter();
-                setsurahNum(e.id);
+                chapter(e.id);
               }}
             >
               {e.num}
@@ -114,7 +117,11 @@ export default function Home() {
               fontFamily: `page_${e.v2_page}`,
             }}
           >
-            <span>{e.code_v2}</span>
+            {result === "loaded" ? (
+              <span>{e.code_v2}</span>
+            ) : (
+              <div>loading</div>
+            )}
           </div>
         );
       })}
@@ -143,7 +150,11 @@ export default function Home() {
               fontFamily: `page_${e.v2_page}`,
             }}
           >
-            <span>{e.code_v2}</span>
+            {result === "loaded" ? (
+              <span>{e.code_v2}</span>
+            ) : (
+              <div>loading</div>
+            )}
           </div>
         );
       })}
