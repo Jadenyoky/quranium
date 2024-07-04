@@ -1,84 +1,152 @@
 "use client";
 import axios from "axios";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import _ from "lodash";
 
 export default function Home() {
-  const verse = useRef();
-  const [data, setdata] = useState([]);
-  const [loading, setloading] = useState(false);
-  const [num, setnum] = useState(1);
-  // const [url, seturl] = useState(
-  //   `https://api.quran.com/api/v4/quran/verses/code_v2?juz_number=${num}`
-  // );
-  const apiVerse = async function (url) {
-    setloading(false);
+  const router = useRouter();
+  const path = usePathname();
+  const params = useParams();
 
+  const [surahs, setsurahs] = useState([]);
+  const surahs2 = [];
+
+  const [chaper2, setchapter2] = useState([]);
+  const [searching, setsearching] = useState([]);
+  let searching2 = [];
+  const [query, setquery] = useState("");
+  const [surahNum, setsurahNum] = useState(1);
+
+  const [result, setresult] = useState("loading");
+
+  const surahsNames = () => {
+    for (let i = 1; i <= 114; i++) {
+      surahs2.push({
+        id: i,
+        num: i >= 100 ? i : i >= 10 ? `0${i}` : `00${i}`,
+      });
+      const ss = _.uniqWith(surahs2, _.isEqual);
+      setsurahs(ss);
+      console.log(ss);
+    }
+  };
+  async function isEqual(num) {
+    console.log(num);
+    num.forEach((element) => {
+      const font = new FontFace(
+        `page_${element}`,
+        `url(https://quran.com/fonts/quran/hafs/v2/woff2/p${element}.woff2)`
+      );
+      font.load();
+      document.fonts.add(font);
+      console.log(element, font);
+    });
+  }
+
+  const url = `https://api.quran.com/api/v4/quran/verses/code_v2?chapter_number=${surahNum}`;
+  const chapter = async () => {
     const apiA = await axios.get(url);
-    setdata(apiA.data.verses);
-    console.log(apiA.data);
+    const num = apiA.data.verses.map((e) => e.v2_page);
+    isEqual(_.uniq(num));
+    // console.log(apiA.data);
+    setchapter2(apiA.data.verses);
+  };
 
-    setloading(true);
-    console.log(url, num);
+  const url2 = `https://api.quran.com/api/v4/search?q=${query}`;
+  const search = async () => {
+    const apiA = await axios.get(url2);
+    const num = apiA.data.search.results.map((e) => e.verse_key);
+    num.forEach((elem) => {
+      async function ver(elem) {
+        const apiA = await axios.get(
+          `https://api.quran.com/api/v4/quran/verses/code_v2?verse_key=${elem}`
+        );
+        const num = apiA.data.verses.map((e) => e.v2_page);
+        isEqual(_.uniq(num));
+
+        searching2.push(apiA.data.verses);
+        setsearching(_.flatMap(searching2));
+        console.log(searching2, searching);
+      }
+      ver(elem);
+    });
+
+    setquery("");
   };
 
   return (
     <>
-      <div>QURANIUM</div>
+      <div onClick={() => surahsNames()}>Quranium</div>
       <button
         onClick={() => {
-          const url = `https://api.quran.com/api/v4/quran/verses/code_v2?juz_number=${num}`;
-          setnum(num + 1);
-          apiVerse(url);
+          router.push(`surah/5`);
         }}
       >
-        get
+        to surah
       </button>
-      {loading && data[0].v2_page > 0 ? (
-        <div>
-          {data.map((e, k) => {
-            return (
-              <div key={k}>
-                <h2
-                  style={{
-                    direction: "rtl",
-                    fontFamily: `page_${e.v2_page}`,
-                  }}
-                  ref={verse}
-                >
-                  {e.code_v2}
-                </h2>
-              </div>
-            );
-          })}
-          <h5
-            onClick={() => {
-              setnum(num + 1);
-              const url = `https://api.quran.com/api/v4/quran/verses/code_v2?juz_number=${num}`;
-              apiVerse(url);
-            }}
-          >
-            Get next JUZ ({num})
-          </h5>
-
-          {num >= 1 ? (
-            <h5
+      {surahs.map((e, k) => {
+        return (
+          <div key={k}>
+            <h3
               onClick={() => {
-                setnum(num - 1);
-                const url = `https://api.quran.com/api/v4/quran/verses/code_v2?juz_number=${
-                  num - 1
-                }`;
-                apiVerse(url);
+                chapter();
+                setsurahNum(e.id);
               }}
             >
-              Get prev JUZ ({num - 1})
-            </h5>
-          ) : (
-            "nothing"
-          )}
-        </div>
-      ) : (
-        <h2>loading</h2>
-      )}
+              {e.num}
+            </h3>
+          </div>
+        );
+      })}
+      {/* <div
+        onClick={() => {
+          chapter();
+        }}
+      >
+        Chapter 2
+      </div> */}
+      {chaper2.map((e, k) => {
+        return (
+          <div
+            key={k}
+            style={{
+              fontFamily: `page_${e.v2_page}`,
+            }}
+          >
+            <span>{e.code_v2}</span>
+          </div>
+        );
+      })}
+      ------------
+      <input
+        style={{
+          border: "1px solid #000",
+        }}
+        type="text"
+        onChange={(e) => {
+          setquery(e.target.value);
+        }}
+      />
+      <div
+        onClick={() => {
+          query !== "" && search();
+        }}
+      >
+        Search
+      </div>
+      {searching.map((e, k) => {
+        return (
+          <div
+            key={k}
+            style={{
+              fontFamily: `page_${e.v2_page}`,
+            }}
+          >
+            <span>{e.code_v2}</span>
+          </div>
+        );
+      })}
     </>
   );
 }

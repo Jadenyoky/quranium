@@ -1,4 +1,9 @@
 @font-face {
+  font-family: surah;
+  src: url(/fonts/quran/sura_names.woff2);
+}
+
+@font-face {
   font-family: bsml;
   src: url(/fonts/quran/QCF2BSML.ttf);
 }
