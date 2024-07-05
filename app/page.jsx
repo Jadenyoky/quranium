@@ -94,7 +94,8 @@ export default function Home() {
           <div key={k}>
             <h3
               onClick={() => {
-                chapter(e.id);
+                // chapter(e.id);
+                router.push(`surah/${e.id}`);
               }}
             >
               {e.num}
@@ -111,18 +112,20 @@ export default function Home() {
       </div> */}
       {chaper2.map((e, k) => {
         return (
-          <div
-            key={k}
-            style={{
-              fontFamily: `page_${e.v2_page}`,
-            }}
-          >
+          <span key={k}>
             {result === "loaded" ? (
-              <span>{e.code_v2}</span>
+              <span
+                style={{
+                  fontFamily: `page_${e.v2_page}`,
+                  fontSize: "40px",
+                }}
+              >
+                {e.code_v2}
+              </span>
             ) : (
               <div>loading</div>
             )}
-          </div>
+          </span>
         );
       })}
       ------------
