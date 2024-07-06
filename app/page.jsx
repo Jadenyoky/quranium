@@ -84,6 +84,13 @@ export default function Home() {
       <div onClick={() => surahsNames()}>Quranium</div>
       <button
         onClick={() => {
+          router.push(`player`);
+        }}
+      >
+        to player
+      </button>
+      <button
+        onClick={() => {
           router.push(`surah/5`);
         }}
       >
