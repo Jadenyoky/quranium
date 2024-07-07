@@ -283,6 +283,15 @@ const Player = () => {
           >
             Repeat
           </span>
+          <span
+            className="material-symbols-outlined"
+            title="Menu"
+            onClick={() => {
+              shuffle();
+            }}
+          >
+            Menu
+          </span>
         </div>
       </div>
     </>
