@@ -151,7 +151,8 @@ const Player = () => {
     }.mp3`;
     surah = [quranChapters[num]];
     elem_name.current.innerText = `${surah[0].number} - ${surah[0].name}`;
-    console.log(num, isPlay, surah, aud, isLoop);
+
+    console.log(aaa);
   }
   function shuffle() {
     isShuffle = true;
@@ -182,10 +183,10 @@ const Player = () => {
     play();
   }
   function loop() {
-    isLoop = true;
+    aud.current.loop = true;
   }
   function unLoop() {
-    isLoop = false;
+    aud.current.loop = false;
   }
 
   useEffect(() => {
@@ -204,18 +205,7 @@ const Player = () => {
         </div>
         <div className="progress"></div>
         <div>
-          <audio
-            controls
-            ref={aud}
-            onEnded={() => next()}
-            onLoadedData={() => {
-              duration(aud.current.duration);
-              elem_time.current.innerText = formattedAudioDuration;
-            }}
-            loop={isLoop}
-            id="audio"
-            src=""
-          />
+          <audio controls ref={aud} id="audion" src="" />
         </div>
         <div className="controls">
           <span
