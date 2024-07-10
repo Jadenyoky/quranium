@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Home(p) {
   console.log(p);
 
+  const [change, setchange] = useState(false);
   const aud = useRef();
   const [dura, setdura] = useState(1000);
 
@@ -15,13 +16,35 @@ export default function Home(p) {
   const images = [];
 
   const [audioVerses, setaudioVerses] = useState([]);
+  const [result, setresult] = useState("loading");
 
+  async function isEqual(num) {
+    setresult("loading");
+    num.forEach((element) => {
+      const font = new FontFace(
+        `page_${element}`,
+        `url(https://quran.com/fonts/quran/hafs/v2/woff2/p${element}.woff2)`
+      );
+      font.load();
+      document.fonts.add(font);
+      document.fonts.ready.then(() => {
+        setresult("loaded");
+      });
+    });
+  }
   const chapter = async () => {
     const apiA = await axios.get(
       `https://api.qurancdn.com/api/qdc/verses/by_chapter/${p.params.id}?words=true&reciter=7&per_page=all&fields=text_uthmani%2Cchapter_id%2Chizb_number%2Ccode_v1%2Ccode_v2%2Ctext_imlaei_simple&reciter=7&word_translation_language=en&word_fields=verse_key%2Cverse_id%2Cpage_number%2Clocation%2Ccode_v2%2Ctext_uthmani%2C&mushaf=10`
     );
-    console.log(apiA.data);
-    setverses(apiA.data.verses);
+
+    const apiA2 = await axios.get(
+      `https://api.quran.com/api/v4/quran/verses/code_v2?chapter_number=${p.params.id}`
+    );
+    const num = apiA2.data.verses.map((e) => e.v2_page);
+    isEqual(_.uniq(num));
+
+    console.log(apiA2.data);
+    setverses(apiA2.data.verses);
 
     apiA.data.verses.forEach((verse) => {
       verse.words.forEach((word) => {
@@ -33,9 +56,9 @@ export default function Home(p) {
           id: word.verse_id,
         });
         setverseImg(_.uniqWith(images, _.isEqual));
-        console.log(images, verseImg);
+        // console.log(images, verseImg);
 
-        console.log(document.images.length);
+        // console.log(document.images.length);
       });
     });
   };
@@ -69,23 +92,62 @@ export default function Home(p) {
     audion.currentTime = from / 1000;
     audion.play();
 
+    audion.style.cssText = `width: 90%; display: block; margin: 20px auto;`;
+
     console.log(array, src, filter, from, audion);
+  };
+
+  window.onscroll = (e) => {
+    console.log(e);
   };
 
   useEffect(() => {
     chapter();
-    // audioByVerse();
   }, []);
 
   return (
     <>
       <div>surah {p.params.id} </div>
-      <button onClick={() => console.log(verseImg)}>click</button>
+      <button
+        onClick={() => {
+          setchange(!change);
+        }}
+      >
+        click to change --
+      </button>
+      <button
+        onClick={() => {
+          audioByVerse(`${p.params.id}:1`);
+        }}
+      >
+        -- click to play
+      </button>
       <audio id="audion" />
-      <div className="word">
-        {verseImg.map((e, k) => {
-          return (
+
+      {change === false ? (
+        <div className="word">
+          {verses.map((e, k) => {
+            return (
+              <span
+                className="verseWord"
+                id={`verse_${e.verse_id}`}
+                key={k}
+                style={{ fontFamily: `page_${e.v2_page}` }}
+                onClick={() => {
+                  byVerse(e.verse_key);
+                  audioByVerse(e.verse_key);
+                }}
+              >
+                {result === "loaded" ? e.code_v2 : "loading"}
+              </span>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="word">
+          {verseImg.map((e, k) => (
             <div
+              className="verseImg"
               id={`verse_${e.id}`}
               key={k}
               onClick={() => {
@@ -95,9 +157,9 @@ export default function Home(p) {
             >
               <img src={`${e.img}`} alt={`${e.key}`} />
             </div>
-          );
-        })}
-      </div>
+          ))}
+        </div>
+      )}
     </>
   );
 }
