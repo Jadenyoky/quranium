@@ -9,7 +9,7 @@ import InfiniteScroll from "react-infinite-scroller";
 export default function Home(p) {
   console.log(p);
 
-  const [change, setchange] = useState(true);
+  const [change, setchange] = useState(false);
   const aud = useRef();
 
   const [verses, setverses] = useState([]);
@@ -134,16 +134,32 @@ export default function Home(p) {
 
     audion.src = src;
     audion.setAttribute("controls", true);
-    audion.currentTime = from / 1000;
-    audion.play();
+    // audion.currentTime = from / 1000;
+    // audion.play();
 
-    audion.style.cssText = `width: 90%; display: block; margin: 20px auto;`;
+    // audion.style.cssText = `width: 90%; display: block; margin: 20px auto;`;
 
     console.log(array, src, filter, from, audion);
   };
+  const audioToVerse = async (key) => {
+    const apiA = await axios.get(
+      `https://api.qurancdn.com/api/qdc/audio/reciters/7/audio_files?chapter=${p.params.id}&segments=true`
+    );
+    const array = apiA.data.audio_files[0];
+    const filter = _.filter(array.verse_timings, {
+      verse_key: key,
+    });
+    const from = filter[0].timestamp_from;
+    const audion = document.querySelector("#audion");
+    audion.currentTime = from / 1000;
+    audion.play();
+    console.log(from);
+  };
 
   useEffect(() => {
+    chapterWord();
     chapter();
+    audioByVerse(`${p.params.id}:1`);
   }, []);
 
   return (
@@ -158,31 +174,45 @@ export default function Home(p) {
       </button>
       <button
         onClick={() => {
-          audioByVerse(`${p.params.id}:1`);
+          // audioByVerse(`${p.params.id}:1`);
+          audioToVerse(`${p.params.id}:1`);
         }}
       >
         -- click to play
       </button>
-      <audio id="audion" />
+      <audio style={{ position: "fixed", bottom: "0" }} id="audion" />
 
       {change === false ? (
         <div className="word">
-          {verses.map((e, k) => {
-            return (
-              <span
-                className="verseWord"
-                id={`verse_${e.verse_id}`}
-                key={k}
-                style={{ fontFamily: `page_${e.v2_page}` }}
-                onClick={() => {
-                  byVerse(e.verse_key);
-                  audioByVerse(e.verse_key);
-                }}
-              >
-                {result === "loaded" ? e.code_v2 : "loading"}
-              </span>
-            );
-          })}
+          <InfiniteScroll
+            className="infinity"
+            pageStart={0}
+            loadMore={chapterWord}
+            hasMore={next === null ? false : true}
+            loader={
+              <div key={0} className="divLoader">
+                <div className="loader"></div>
+              </div>
+            }
+          >
+            {verses.map((e, k) => {
+              return (
+                <span
+                  className="verseWord"
+                  id={`verse_${e.verse_id}`}
+                  key={k}
+                  style={{ fontFamily: `page_${e.v2_page}` }}
+                  onClick={() => {
+                    byVerse(e.verse_key);
+                    // audioByVerse(e.verse_key);
+                    audioToVerse(e.verse_key);
+                  }}
+                >
+                  {result === "loaded" ? e.code_v2 : "loading"}
+                </span>
+              );
+            })}
+          </InfiniteScroll>
         </div>
       ) : (
         <div className="word">
@@ -204,7 +234,8 @@ export default function Home(p) {
                 key={k}
                 onClick={() => {
                   byVerse(e.key);
-                  audioByVerse(e.key);
+                  // audioByVerse(e.key);
+                  audioToVerse(e.key);
                 }}
               >
                 <img src={`${e.img}`} alt={`${e.key}`} />

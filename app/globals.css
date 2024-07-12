@@ -11,6 +11,11 @@ body {
   /* background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, #fff 300px), fixed 0 0 / 20px 20px radial-gradient(#d1d1d1 1px, transparent 0), fixed 10px 10px / 20px 20px radial-gradient(#d1d1d1 1px, transparent 0); */
 }
 
+#audion {
+  position: fixed;
+  bottom: 0;
+}
+
 h2 {
   font-size: 30px;
   border: 1px solid #F8F2DC70;
@@ -56,7 +61,7 @@ h3 {
 
   >.verseImg>img {
     height: 90px;
-    animation: 1s aaa ease;
+    animation: 5s aaa ease;
   }
 }
 
