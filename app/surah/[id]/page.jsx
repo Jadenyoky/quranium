@@ -3,17 +3,20 @@ import axios from "axios";
 import _ from "lodash";
 import moment from "moment";
 import { useEffect, useRef, useState } from "react";
+// import InfiniteScroll from "react-infinite-scroll-component";
+import InfiniteScroll from "react-infinite-scroller";
 
 export default function Home(p) {
   console.log(p);
 
-  const [change, setchange] = useState(false);
+  const [change, setchange] = useState(true);
   const aud = useRef();
-  const [dura, setdura] = useState(1000);
 
   const [verses, setverses] = useState([]);
   const [verseImg, setverseImg] = useState([]);
   const images = [];
+  const [total, settotal] = useState(1);
+  const [next, setnext] = useState(1);
 
   const [audioVerses, setaudioVerses] = useState([]);
   const [result, setresult] = useState("loading");
@@ -34,17 +37,22 @@ export default function Home(p) {
   }
   const chapter = async () => {
     const apiA = await axios.get(
-      `https://api.qurancdn.com/api/qdc/verses/by_chapter/${p.params.id}?words=true&reciter=7&per_page=all&fields=text_uthmani%2Cchapter_id%2Chizb_number%2Ccode_v1%2Ccode_v2%2Ctext_imlaei_simple&reciter=7&word_translation_language=en&word_fields=verse_key%2Cverse_id%2Cpage_number%2Clocation%2Ccode_v2%2Ctext_uthmani%2C&mushaf=10`
+      `https://api.qurancdn.com/api/qdc/verses/by_chapter/${p.params.id}?words=true&translation_fields=resource_name%2Clanguage_id&fields=text_uthmani%2Cchapter_id%2Chizb_number%2Ctext_imlaei_simple&translations=85&reciter=7&word_translation_language=en&page=${next}&word_fields=verse_key%2Cverse_id%2Cpage_number%2Clocation%2Ctext_uthmani%2Ctajweed%2Cqpc_uthmani_hafs&mushaf=11`
     );
 
-    const apiA2 = await axios.get(
-      `https://api.quran.com/api/v4/quran/verses/code_v2?chapter_number=${p.params.id}`
-    );
-    const num = apiA2.data.verses.map((e) => e.v2_page);
-    isEqual(_.uniq(num));
+    settotal(apiA.data.pagination.total_pages);
+    setnext(apiA.data.pagination.next_page);
+    console.log(apiA.data, total, next);
 
-    console.log(apiA2.data);
-    setverses(apiA2.data.verses);
+    // const apiA2 = await axios.get(
+    //   `https://api.quran.com/api/v4/quran/verses/code_v2?chapter_number=${p.params.id}`
+    // );
+    // const num = apiA2.data.verses.map((e) => e.v2_page);
+    // isEqual(_.uniq(num));
+
+    // console.log(apiA2.data);
+    // setverses(apiA2.data.verses);
+    // console.log(verses);
 
     apiA.data.verses.forEach((verse) => {
       verse.words.forEach((word) => {
@@ -55,7 +63,44 @@ export default function Home(p) {
           key: word.verse_key,
           id: word.verse_id,
         });
-        setverseImg(_.uniqWith(images, _.isEqual));
+        setverseImg(verseImg.concat(_.uniqWith(images, _.isEqual)));
+        // console.log(images, verseImg);
+
+        // console.log(document.images.length);
+      });
+    });
+  };
+
+  const chapterWord = async () => {
+    const apiA2 = await axios.get(
+      `https://api.quran.com/api/v4/quran/verses/code_v2?chapter_number=${p.params.id}`
+    );
+    const num = apiA2.data.verses.map((e) => e.v2_page);
+    isEqual(_.uniq(num));
+
+    console.log(apiA2.data);
+    setverses(verses.concat(apiA2.data.verses));
+    console.log(verses);
+  };
+  const nextPage = async () => {
+    const apiA = await axios.get(
+      `https://api.qurancdn.com/api/qdc/verses/by_chapter/${p.params.id}?words=true&translation_fields=resource_name%2Clanguage_id&fields=text_uthmani%2Cchapter_id%2Chizb_number%2Ctext_imlaei_simple&translations=85&reciter=7&word_translation_language=en&page=${next}&word_fields=verse_key%2Cverse_id%2Cpage_number%2Clocation%2Ctext_uthmani%2Ctajweed%2Cqpc_uthmani_hafs&mushaf=11`
+    );
+    console.log(apiA.data);
+    setnext(apiA.data.pagination.next_page);
+
+    console.log(total, next);
+
+    apiA.data.verses.forEach((verse) => {
+      verse.words.forEach((word) => {
+        images.push({
+          img: `https://static.qurancdn.com/images/${word.text}`,
+          text: word.text_uthmani,
+          translation: word.translation.text,
+          key: word.verse_key,
+          id: word.verse_id,
+        });
+        setverseImg(verseImg.concat(images));
         // console.log(images, verseImg);
 
         // console.log(document.images.length);
@@ -95,10 +140,6 @@ export default function Home(p) {
     audion.style.cssText = `width: 90%; display: block; margin: 20px auto;`;
 
     console.log(array, src, filter, from, audion);
-  };
-
-  window.onscroll = (e) => {
-    console.log(e);
   };
 
   useEffect(() => {
@@ -145,19 +186,31 @@ export default function Home(p) {
         </div>
       ) : (
         <div className="word">
-          {verseImg.map((e, k) => (
-            <div
-              className="verseImg"
-              id={`verse_${e.id}`}
-              key={k}
-              onClick={() => {
-                byVerse(e.key);
-                audioByVerse(e.key);
-              }}
-            >
-              <img src={`${e.img}`} alt={`${e.key}`} />
-            </div>
-          ))}
+          <InfiniteScroll
+            className="infinity"
+            pageStart={0}
+            loadMore={chapter}
+            hasMore={next === null ? false : true}
+            loader={
+              <div key={0} className="divLoader">
+                <div className="loader"></div>
+              </div>
+            }
+          >
+            {verseImg.map((e, k) => (
+              <div
+                className="verseImg"
+                id={`verse_${e.id}`}
+                key={k}
+                onClick={() => {
+                  byVerse(e.key);
+                  audioByVerse(e.key);
+                }}
+              >
+                <img src={`${e.img}`} alt={`${e.key}`} />
+              </div>
+            ))}
+          </InfiniteScroll>
         </div>
       )}
     </>
