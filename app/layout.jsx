@@ -1,8 +1,9 @@
-import { Inter } from "next/font/google";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { ModalsProvider } from "@mantine/modals";
+import "@mantine/core/styles.css";
 import "./globals.css";
 // import "./fonts.css";
 
-const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Quranium",
   description: "Website for read , search , listen and mean quran",
@@ -13,12 +14,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
-        />
+        <link rel="stylesheet" />
+        <ColorSchemeScript defaultColorScheme="auto" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>
+        <MantineProvider>
+          <ModalsProvider>{children}</ModalsProvider>
+        </MantineProvider>
+      </body>
     </html>
   );
 }

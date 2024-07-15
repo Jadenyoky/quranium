@@ -13,4 +13,7 @@ const withPWA = withPWAInit({
 
 export default withPWA({
   // Your Next.js config
+  experimental: {
+    optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
+  },
 });
