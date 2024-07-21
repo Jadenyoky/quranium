@@ -166,66 +166,80 @@ export default function Home(p) {
       </button>
       <audio id="audion" />
 
-      {change === false ? (
-        <div className="word">
-          {/* <InfiniteScroll
-            className="infinity"
-            pageStart={0}
-            loadMore={chapterWord}
-            hasMore={next === null ? false : true}
-            loader={
-              <div key={0} className="divLoader">
-                <div className="loader"></div>
-              </div>
-            }
-          >
-            {verses.map((e, k) => {
-              return (
-                <span
-                  className="verseWord"
-                  id={`verse_${e.verse_id}`}
-                  key={k}
-                  style={{ fontFamily: `page_${e.v2_page}` }}
-                  onClick={() => {
-                    byVerse(e.verse_key);
-                    audioByVerse(e.verse_key);
-                  }}
-                >
-                  {result === "loaded" ? e.code_v2 : "loading"}
-                </span>
-              );
-            })}
-          </InfiniteScroll> */}
-        </div>
-      ) : (
-        <div className="word">
-          <InfiniteScroll
-            className="infinity"
-            pageStart={0}
-            loadMore={chapter}
-            hasMore={next === null ? false : true}
-            loader={
-              <div key={0} className="divLoader">
-                <div className="loader"></div>
-              </div>
-            }
-          >
-            {verseImg.map((e, k) => (
-              <div
-                className="verseImg"
-                id={`verse_${e.id}`}
-                key={k}
-                onClick={() => {
-                  byVerse(e.key);
-                  audioByVerse(e.key);
-                }}
+      {/* Open the modal using document.getElementById('ID').showModal() method */}
+      <button
+        className="btn"
+        onClick={() => document.getElementById("my_modal_2").showModal()}
+      >
+        open modal
+      </button>
+      <dialog id="my_modal_2" className="modal">
+        <div className="modal-box min-w-[85%] min-h-[75%]">
+          {change === false ? (
+            <div className="word">
+              <InfiniteScroll
+                className="infinity"
+                pageStart={0}
+                loadMore={chapterWord}
+                hasMore={next === null ? false : true}
+                loader={
+                  <div key={0} className="divLoader">
+                    <div className="loader"></div>
+                  </div>
+                }
               >
-                <img src={`${e.img}`} alt={`${e.key}`} />
-              </div>
-            ))}
-          </InfiniteScroll>
+                {verses.map((e, k) => {
+                  return (
+                    <span
+                      className="verseWord"
+                      id={`verse_${e.verse_id}`}
+                      key={k}
+                      style={{ fontFamily: `page_${e.v2_page}` }}
+                      onClick={() => {
+                        byVerse(e.verse_key);
+                        audioByVerse(e.verse_key);
+                      }}
+                    >
+                      {result === "loaded" ? e.code_v2 : "loading"}
+                    </span>
+                  );
+                })}
+              </InfiniteScroll>
+            </div>
+          ) : (
+            <div className="word">
+              <InfiniteScroll
+                className="infinity"
+                pageStart={0}
+                loadMore={chapter}
+                hasMore={next === null ? false : true}
+                loader={
+                  <div key={0} className="divLoader">
+                    <div className="loader"></div>
+                  </div>
+                }
+              >
+                {verseImg.map((e, k) => (
+                  <div
+                    className="verseImg"
+                    id={`verse_${e.id}`}
+                    key={k}
+                    onClick={() => {
+                      byVerse(e.key);
+                      audioByVerse(e.key);
+                    }}
+                  >
+                    <img src={`${e.img}`} alt={`${e.key}`} />
+                  </div>
+                ))}
+              </InfiniteScroll>
+            </div>
+          )}
         </div>
-      )}
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </>
   );
 }

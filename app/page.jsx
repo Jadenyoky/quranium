@@ -1,10 +1,7 @@
 "use client";
-import NavBar from "./components/nav";
+import Group from "./components/group";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  return (
-    <>
-      <NavBar />
-    </>
-  );
+  return <></>;
 }

@@ -1,7 +1,7 @@
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
-import { ModalsProvider } from "@mantine/modals";
-import "@mantine/core/styles.css";
 import "./globals.css";
+import Group from "./components/group";
+import { ThemeProvider } from "./context/theme";
+import ClientTheme from "./context/clientTheme";
 // import "./fonts.css";
 
 export const metadata = {
@@ -15,12 +15,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="stylesheet" />
-        <ColorSchemeScript defaultColorScheme="auto" />
       </head>
       <body>
-        <MantineProvider>
-          <ModalsProvider>{children}</ModalsProvider>
-        </MantineProvider>
+        <ThemeProvider>
+          <ClientTheme>
+            <Group />
+            {children}
+          </ClientTheme>
+        </ThemeProvider>
       </body>
     </html>
   );
