@@ -1,9 +1,9 @@
 "use client";
-import Player2 from "../components/player2";
+import Player from "../components/player";
 const Page = () => {
   return (
     <div>
-      <Player2 />
+      <Player />
     </div>
   );
 };
