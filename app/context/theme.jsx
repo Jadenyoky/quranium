@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useEffect, useState } from "react";
+import store from "store2";
 
 export const ThemeContext = createContext();
 
@@ -10,32 +11,39 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     setloading(true);
-    const store = localStorage.getItem("theme") || "light";
-    settheme(store);
+    const stored = store("theme") || "light";
+    settheme(stored);
   }, []);
-  
+
   if (!loading) {
     return (
       <div
         style={{
-          border: "1px solid black",
-          padding: "10px",
-          borderRadius: "5px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          height: "100vh",
           gap: "5px",
-          fontSize: "30px",
         }}
       >
-        LOADING ...
+        <div className="flex w-52 flex-col gap-4">
+          <div className="skeleton h-32 w-full"></div>
+          <div className="skeleton h-4 w-28"></div>
+          <div className="skeleton h-4 w-full"></div>
+          <div className="skeleton h-4 w-full"></div>
+          <div className="skeleton h-4 w-full"></div>
+          <div className="skeleton h-4 w-28"></div>
+          <div className="skeleton h-4 w-28"></div>
+          <div className="skeleton h-4 w-full"></div>
+          <div className="skeleton h-4 w-full"></div>
+        </div>
       </div>
     );
   }
 
   const changeTheme = (theme) => {
     settheme(theme);
-    localStorage.setItem("theme", theme);
+    store("theme", theme);
   };
 
   return (
