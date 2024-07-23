@@ -1,10 +1,10 @@
 "use client";
+import { Skeleton } from "@nextui-org/react";
 import axios from "axios";
 import _ from "lodash";
 import moment from "moment";
 import { useEffect, useRef, useState } from "react";
 // import InfiniteScroll from "react-infinite-scroll-component";
-import InfiniteScroll from "react-infinite-scroller";
 
 export default function Home(p) {
   console.log(p);
@@ -20,6 +20,7 @@ export default function Home(p) {
 
   const [audioVerses, setaudioVerses] = useState([]);
   const [result, setresult] = useState("loading");
+  const [isLoaded, setisloaded] = useState(false);
 
   async function isEqual(num) {
     setresult("loading");
@@ -64,9 +65,7 @@ export default function Home(p) {
           id: word.verse_id,
         });
         setverseImg(verseImg.concat(_.uniqWith(images, _.isEqual)));
-        // console.log(images, verseImg);
-
-        // console.log(document.images.length);
+        setisloaded(true);
       });
     });
   };
@@ -150,13 +149,7 @@ export default function Home(p) {
   return (
     <>
       <div>surah {p.params.id} </div>
-      <button
-        onClick={() => {
-          setchange(!change);
-        }}
-      >
-        click to change --
-      </button>
+
       <button
         onClick={() => {
           audioByVerse(`${p.params.id}:1`);
@@ -166,80 +159,23 @@ export default function Home(p) {
       </button>
       <audio id="audion" />
 
-      {/* Open the modal using document.getElementById('ID').showModal() method */}
-      <button
-        className="btn"
-        onClick={() => document.getElementById("my_modal_2").showModal()}
-      >
-        open modal
-      </button>
-      <dialog id="my_modal_2" className="modal">
-        <div className="modal-box min-w-[85%] min-h-[75%]">
-          {change === false ? (
-            <div className="word">
-              <InfiniteScroll
-                className="infinity"
-                pageStart={0}
-                loadMore={chapterWord}
-                hasMore={next === null ? false : true}
-                loader={
-                  <div key={0} className="divLoader">
-                    <div className="loader"></div>
-                  </div>
-                }
-              >
-                {verses.map((e, k) => {
-                  return (
-                    <span
-                      className="verseWord"
-                      id={`verse_${e.verse_id}`}
-                      key={k}
-                      style={{ fontFamily: `page_${e.v2_page}` }}
-                      onClick={() => {
-                        byVerse(e.verse_key);
-                        audioByVerse(e.verse_key);
-                      }}
-                    >
-                      {result === "loaded" ? e.code_v2 : "loading"}
-                    </span>
-                  );
-                })}
-              </InfiniteScroll>
+      <Skeleton isLoaded={isLoaded} className="rounded-lg">
+        <div className="word">
+          {verseImg.map((e, k) => (
+            <div
+              className="verseImg"
+              id={`verse_${e.id}`}
+              key={k}
+              onClick={() => {
+                byVerse(e.key);
+                audioByVerse(e.key);
+              }}
+            >
+              <img src={`${e.img}`} alt={`${e.key}`} />
             </div>
-          ) : (
-            <div className="word">
-              <InfiniteScroll
-                className="infinity"
-                pageStart={0}
-                loadMore={chapter}
-                hasMore={next === null ? false : true}
-                loader={
-                  <div key={0} className="divLoader">
-                    <div className="loader"></div>
-                  </div>
-                }
-              >
-                {verseImg.map((e, k) => (
-                  <div
-                    className="verseImg"
-                    id={`verse_${e.id}`}
-                    key={k}
-                    onClick={() => {
-                      byVerse(e.key);
-                      audioByVerse(e.key);
-                    }}
-                  >
-                    <img src={`${e.img}`} alt={`${e.key}`} />
-                  </div>
-                ))}
-              </InfiniteScroll>
-            </div>
-          )}
+          ))}
         </div>
-        <form method="dialog" className="modal-backdrop">
-          <button>close</button>
-        </form>
-      </dialog>
+      </Skeleton>
     </>
   );
 }
