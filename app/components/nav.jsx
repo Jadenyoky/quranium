@@ -22,17 +22,22 @@ const Nav = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+  const navList = [
+    {
+      title: "قراءة",
+      icon: "book",
+      link: "/surah/100",
+    },
+    {
+      title: "استماع",
+      icon: "headphones",
+      link: "/surah/99",
+    },
+    {
+      title: "بحث",
+      icon: "search",
+      link: "/surah/101",
+    },
   ];
   return (
     <>
@@ -43,21 +48,44 @@ const Nav = () => {
             className="sm:hidden"
           />
           <NavbarBrand>
-            <p className="font-bold text-inherit">QURANIUM</p>
+            <p
+              className="text-lg"
+              style={{
+                fontFamily: "amiri",
+              }}
+            >
+              QURANIUM
+            </p>
           </NavbarBrand>
         </NavbarContent>
 
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem>
             <Tabs
-              color="success"
+              variant="bordered"
+              color="secondary"
               aria-label="Tabs colors"
-              radius="lg"
+              radius="full"
               selectedKey={pathname}
             >
-              <Tab key="/surah/1" title="one" as={Link} href="/surah/1" />
-              <Tab key="/surah/2" title="two" as={Link} href="/surah/2" />
-              <Tab key="/surah/3" title="three" as={Link} href="/surah/3" />
+              {navList.map((e, k) => {
+                return (
+                  <Tab
+                    key={e.link}
+                    style={{
+                      fontFamily: "amiri",
+                    }}
+                    title={
+                      <div className="flex space-x-2 drop-shadow-lg">
+                        <span className=" text-base ">{e.title}</span>
+                        <span className="material-icons">{e.icon}</span>
+                      </div>
+                    }
+                    as={Link}
+                    href={e.link}
+                  />
+                );
+              })}
             </Tabs>
           </NavbarItem>
         </NavbarContent>
@@ -66,25 +94,35 @@ const Nav = () => {
             <SwitchMode />
           </NavbarItem>
         </NavbarContent>
-        <NavbarMenu>
-          {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === menuItems.length - 1
-                    ? "danger"
-                    : "foreground"
-                }
-                className="w-full"
-                href="#"
-                size="lg"
-              >
-                {item}
-              </Link>
-            </NavbarMenuItem>
-          ))}
+        <NavbarMenu className="backdrop-blur overflow-hidden">
+          <Tabs
+            isVertical
+            variant="bordered"
+            color="secondary"
+            aria-label="Tabs colors"
+            // radius="full"
+            selectedKey={pathname}
+            className="w-full flex h-full flex-grow flex-col"
+          >
+            {navList.map((e, k) => {
+              return (
+                <Tab
+                  key={e.link}
+                  style={{
+                    fontFamily: "amiri",
+                  }}
+                  title={
+                    <div className="flex space-x-2 drop-shadow-lg">
+                      <span className=" text-base ">{e.title}</span>
+                      <span className="material-icons">{e.icon}</span>
+                    </div>
+                  }
+                  as={Link}
+                  href={e.link}
+                />
+              );
+            })}
+          </Tabs>
         </NavbarMenu>
       </Navbar>
     </>

@@ -7,6 +7,11 @@
   src: url(/fonts/quran/sura_names.woff2);
 }
 
+@font-face {
+  font-family: amiri;
+  src: url(/fonts/rafah.ttf);
+}
+
 body {}
 
 #audion {

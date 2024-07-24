@@ -8,6 +8,7 @@ import {
   DropdownTrigger,
   Switch as NextUISwitch,
   Progress,
+  Spinner,
 } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 
@@ -19,26 +20,9 @@ const SwitchMode = () => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return "loading";
+  if (!mounted)
+    return <Spinner className="mr-4" color="success" labelColor="success" />;
 
-  const items = [
-    {
-      key: "new",
-      label: "New file",
-    },
-    {
-      key: "copy",
-      label: "Copy link",
-    },
-    {
-      key: "edit",
-      label: "Edit file",
-    },
-    {
-      key: "delete",
-      label: "Delete file",
-    },
-  ];
   return (
     <>
       <NextUISwitch
