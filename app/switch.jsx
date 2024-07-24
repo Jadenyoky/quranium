@@ -46,32 +46,6 @@ const SwitchMode = () => {
         isSelected={theme === "dark"}
         onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
       />
-
-      <div className="flex flex-col gap-6 w-full max-w-md">
-        <Progress color="default" aria-label="Loading..." value={70} />
-        <Progress color="primary" aria-label="Loading..." value={70} />
-        <Progress color="secondary" aria-label="Loading..." value={70} />
-        <Progress color="success" aria-label="Loading..." value={70} />
-        <Progress color="warning" aria-label="Loading..." value={70} />
-        <Progress color="danger" aria-label="Loading..." value={70} />
-      </div>
-
-      <Dropdown>
-        <DropdownTrigger>
-          <Button variant="bordered">Open Menu</Button>
-        </DropdownTrigger>
-        <DropdownMenu aria-label="Dynamic Actions" items={items}>
-          {(item) => (
-            <DropdownItem
-              key={item.key}
-              color={item.key === "delete" ? "danger" : "default"}
-              className={item.key === "delete" ? "text-danger" : ""}
-            >
-              {item.label}
-            </DropdownItem>
-          )}
-        </DropdownMenu>
-      </Dropdown>
     </>
   );
 };

@@ -1,5 +1,5 @@
 "use client";
-import { Skeleton } from "@nextui-org/react";
+import { Image, Skeleton } from "@nextui-org/react";
 import axios from "axios";
 import _ from "lodash";
 import moment from "moment";
@@ -63,6 +63,7 @@ export default function Home(p) {
           translation: word.translation.text,
           key: word.verse_key,
           id: word.verse_id,
+          loading: false,
         });
         setverseImg(verseImg.concat(_.uniqWith(images, _.isEqual)));
         setisloaded(true);
@@ -143,7 +144,7 @@ export default function Home(p) {
 
   useEffect(() => {
     chapterWord();
-    chapter();
+    // chapter();
   }, []);
 
   return (
@@ -157,25 +158,44 @@ export default function Home(p) {
       >
         -- click to play
       </button>
+
       <audio id="audion" />
 
-      <Skeleton isLoaded={isLoaded} className="rounded-lg">
-        <div className="word">
-          {verseImg.map((e, k) => (
-            <div
-              className="verseImg"
-              id={`verse_${e.id}`}
+      <div className="word">
+        {verses.map((e, k) => {
+          return (
+            <span
               key={k}
-              onClick={() => {
-                byVerse(e.key);
-                audioByVerse(e.key);
+              style={{
+                color: "red",
+                fontFamily: `page_${e.v2_page}`,
               }}
             >
-              <img src={`${e.img}`} alt={`${e.key}`} />
-            </div>
-          ))}
-        </div>
-      </Skeleton>
+              {e.code_v2}
+            </span>
+          );
+        })}
+      </div>
+      {/* <div className="word">
+        {verseImg.map((e, k) => (
+          <div
+            className="verseImg"
+            id={`verse_${e.id}`}
+            key={k}
+            onClick={() => {
+              byVerse(e.key);
+              audioByVerse(e.key);
+            }}
+          >
+            <Image
+              isBlurred
+              isLoading={e.loading}
+              src={`${e.img}`}
+              alt={`${e.key}`}
+            />
+          </div>
+        ))}
+      </div> */}
     </>
   );
 }
