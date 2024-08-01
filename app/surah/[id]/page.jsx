@@ -1,5 +1,4 @@
 "use client";
-import { Image, Skeleton } from "@nextui-org/react";
 import axios from "axios";
 import _ from "lodash";
 import moment from "moment";

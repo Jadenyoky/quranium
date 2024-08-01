@@ -1,8 +1,5 @@
 import "./globals.css";
-import "material-icons/iconfont/material-icons.css";
-// import "./fonts.css";
-import { Providers } from "./providers";
-import Nav from "./components/nav";
+import ThemeRegistry from "../components/theme/ThemeRegistry";
 
 export const metadata = {
   title: "Quranium",
@@ -15,10 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head></head>
       <body>
-        <Providers>
-          <Nav />
-          {children}
-        </Providers>
+        <ThemeRegistry>{children}</ThemeRegistry>
       </body>
     </html>
   );
