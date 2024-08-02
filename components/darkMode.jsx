@@ -1,5 +1,10 @@
 "use client";
-import { Brightness4, Brightness7 } from "@mui/icons-material";
+import {
+  Brightness1Outlined,
+  Brightness2Outlined,
+  Brightness4,
+  Brightness7,
+} from "@mui/icons-material";
 import { Button, Paper } from "@mui/material";
 import React, { useState } from "react";
 import store from "store2";
@@ -7,6 +12,8 @@ import store from "store2";
 const DarkMode = ({ prefer, setprefer }) => {
   const stored = store("theme", prefer);
   console.log(stored);
+  const [test, settest] = useState("wait");
+  store("test", test);
   return (
     <>
       <Paper elevation={7}>
@@ -21,6 +28,17 @@ const DarkMode = ({ prefer, setprefer }) => {
           }}
         >
           {stored === "dark" ? <Brightness7 /> : <Brightness4 />}
+        </Button>
+        <Button
+          onClick={() => {
+            if (test === "done") {
+              settest("wait");
+            } else {
+              settest("done");
+            }
+          }}
+        >
+          {test === "done" ? <Brightness1Outlined /> : <Brightness2Outlined />}
         </Button>
       </Paper>
     </>
