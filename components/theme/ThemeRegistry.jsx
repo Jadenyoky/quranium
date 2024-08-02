@@ -13,7 +13,7 @@ export default function ThemeRegistry({ children }) {
   useEffect(() => {
     setloading(true);
     store("theme", prefer);
-  }, []);
+  }, [prefer]);
 
   if (!loading) {
     return (
