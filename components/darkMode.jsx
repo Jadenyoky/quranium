@@ -9,7 +9,7 @@ import { Button, Paper } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import store from "store2";
 
-const DarkMode = ({ stored }) => {
+const DarkMode = ({ setprefer, stored }) => {
   const [mode, setmode] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const DarkMode = ({ stored }) => {
         <Button
           onClick={() => {
             setmode(!mode);
-            // mode ? setprefer("dark") : setprefer("light");
+            mode ? setprefer("dark") : setprefer("light");
             store("theme", mode ? "dark" : "light");
           }}
         >

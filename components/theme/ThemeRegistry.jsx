@@ -7,13 +7,17 @@ import store from "store2";
 
 export default function ThemeRegistry({ children }) {
   const stored = store("theme");
-  // const [prefer, setprefer] = useState(stored || "light");
+  const [prefer, setprefer] = useState(stored || "light");
   const [loading, setloading] = useState(false);
 
+  const theme = createTheme({
+    palette: { mode: stored },
+  });
+
   useEffect(() => {
-    setloading(true);
     store("theme", stored ? stored : "light");
     console.log("999");
+    setloading(true);
   }, []);
 
   if (!loading) {
@@ -31,13 +35,11 @@ export default function ThemeRegistry({ children }) {
       </div>
     );
   }
-  const theme = createTheme({
-    palette: { mode: stored },
-  });
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <DarkMode stored={stored} />
+      <DarkMode setprefer={setprefer} stored={stored} />
       {children}
     </ThemeProvider>
   );
