@@ -27,6 +27,7 @@ button {
 }
 
 .loading {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -37,6 +38,12 @@ button {
   background-color: #09BC8A;
   color: white;
   font-size: 30px;
+  position: relative;
+
+  >button {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 #audion {

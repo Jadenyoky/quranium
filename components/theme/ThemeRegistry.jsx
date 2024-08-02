@@ -4,7 +4,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useEffect, useState } from "react";
 import DarkMode from "./darkMode";
 import store from "store2";
-import { Skeleton, Typography } from "@mui/material";
+import { Button, Skeleton, Typography } from "@mui/material";
 
 export default function ThemeRegistry({ children }) {
   const stored = store("theme");
@@ -25,6 +25,9 @@ export default function ThemeRegistry({ children }) {
   if (!loading) {
     return (
       <div className="loading">
+        <Button variant="contained" color="secondary">
+          Bottom
+        </Button>
         <Skeleton animation="wave" variant="circular" width={70} height={70} />
         <Skeleton variant="rectangular" width={"80%"} height={"15%"} />
         <Typography variant="inherit" color="white">
