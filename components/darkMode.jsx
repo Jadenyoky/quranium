@@ -22,14 +22,10 @@ const DarkMode = ({ prefer, setprefer }) => {
         <Button
           onClick={() => {
             setmode(!mode);
-            if (stored === "dark") {
-              setprefer("light");
-            } else {
-              setprefer("dark");
-            }
+            stored === "light" ? setprefer("dark") : setprefer("light");
           }}
         >
-          {mode ? <Brightness7 /> : <Brightness4 />}
+          {stored === "light" ? <Brightness4 /> : <Brightness7 />}
         </Button>
         <Button
           onClick={() => {
