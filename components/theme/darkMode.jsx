@@ -1,10 +1,4 @@
 "use client";
-import {
-  Brightness1Outlined,
-  Brightness2Outlined,
-  Brightness4,
-  Brightness7,
-} from "@mui/icons-material";
 import { Button, Paper } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import store from "store2";

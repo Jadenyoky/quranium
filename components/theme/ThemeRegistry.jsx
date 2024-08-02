@@ -2,7 +2,7 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useEffect, useState } from "react";
-import DarkMode from "../darkMode";
+import DarkMode from "./darkMode";
 import store from "store2";
 
 export default function ThemeRegistry({ children }) {
@@ -16,7 +16,6 @@ export default function ThemeRegistry({ children }) {
 
   useEffect(() => {
     store("theme", stored ? stored : "light");
-    console.log("999");
     setloading(true);
   }, []);
 
