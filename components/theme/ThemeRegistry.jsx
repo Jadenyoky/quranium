@@ -28,7 +28,7 @@ export default function ThemeRegistry({ children }) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "100dvh",
+          height: "100svh",
           gap: "5px",
         }}
       >
