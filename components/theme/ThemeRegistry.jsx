@@ -13,6 +13,7 @@ export default function ThemeRegistry({ children }) {
   useEffect(() => {
     setloading(true);
     store("theme", prefer);
+    console.log("done999");
   }, [prefer]);
 
   if (!loading) {

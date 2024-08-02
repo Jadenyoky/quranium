@@ -6,7 +6,7 @@ import {
   Brightness7,
 } from "@mui/icons-material";
 import { Button, Paper } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import store from "store2";
 
 const DarkMode = ({ prefer, setprefer }) => {
@@ -14,6 +14,11 @@ const DarkMode = ({ prefer, setprefer }) => {
   console.log(stored);
   const [test, settest] = useState("wait");
   store("test", test);
+
+  useEffect(() => {
+    store("theme", prefer);
+    console.log("done");
+  }, [prefer]);
   return (
     <>
       <Paper elevation={7}>
