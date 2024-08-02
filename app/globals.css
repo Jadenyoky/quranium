@@ -19,7 +19,24 @@
 }
 
 body {
-  min-height: 100vh;
+  font-family: amiri;
+}
+
+button {
+  font-family: amiri !important;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100svh;
+  background-color: #09BC8A;
+  color: white;
+  font-size: 30px;
 }
 
 #audion {
