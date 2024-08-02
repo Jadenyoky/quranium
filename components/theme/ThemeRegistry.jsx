@@ -24,11 +24,11 @@ export default function ThemeRegistry({ children }) {
   if (!loading) {
     return (
       <div
+        className="h-lvh"
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "100svh",
           gap: "5px",
         }}
       >
