@@ -16,7 +16,9 @@ export default function ThemeRegistry({ children }) {
 
   useEffect(() => {
     store("theme", stored ? stored : "light");
-    setloading(true);
+    setTimeout(() => {
+      setloading(true);
+    }, 10 * 1000);
   }, []);
 
   if (!loading) {
@@ -26,7 +28,7 @@ export default function ThemeRegistry({ children }) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "100vh",
+          height: "100dvh",
           gap: "5px",
         }}
       >
