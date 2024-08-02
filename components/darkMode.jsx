@@ -6,15 +6,16 @@ import {
   Brightness7,
 } from "@mui/icons-material";
 import { Button, Paper } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import store from "store2";
 
-const DarkMode = ({ prefer, setprefer }) => {
-  const stored = store("theme", prefer);
+const DarkMode = ({ stored }) => {
   const [mode, setmode] = useState(false);
-  console.log(stored);
-  const [test, settest] = useState("wait");
-  store("test", test);
+
+  useEffect(() => {
+    setmode(stored === "light" ? true : false);
+    console.log("sd");
+  }, []);
   return (
     <>
       <Paper elevation={7}>
@@ -22,21 +23,11 @@ const DarkMode = ({ prefer, setprefer }) => {
         <Button
           onClick={() => {
             setmode(!mode);
-            stored === "light" ? setprefer("dark") : setprefer("light");
+            // mode ? setprefer("dark") : setprefer("light");
+            store("theme", mode ? "dark" : "light");
           }}
         >
-          {stored === "light" ? <Brightness4 /> : <Brightness7 />}
-        </Button>
-        <Button
-          onClick={() => {
-            if (test === "done") {
-              settest("wait");
-            } else {
-              settest("done");
-            }
-          }}
-        >
-          {test === "done" ? <Brightness1Outlined /> : <Brightness2Outlined />}
+          {mode ? "dark" : "light"}
         </Button>
       </Paper>
     </>
